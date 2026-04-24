@@ -1,0 +1,53 @@
+{
+  "skill": "chanlun-zhongshu-mapper",
+  "version": "0.1.0",
+  "source_book": "《缠论》 — 缠中说禅",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "三段次级别走势区间分别是[10,12]、[11,13]、[10.8,12.5]，请按缠论计算中枢。",
+      "expected_behavior": "应激活本skill，计算重叠区间并说明级别。",
+      "notes": "明确中枢计算。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这里两个中枢的波动区间重叠了，是不是形成更大级别中枢？",
+      "expected_behavior": "应激活本skill，检查中枢扩张条件。",
+      "notes": "级别扩张场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "请判断这段30分钟走势是盘整还是上涨趋势。",
+      "expected_behavior": "应激活本skill，围绕中枢数量和关系判断。",
+      "notes": "走势类型判断。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "RSI低于30是不是超卖？",
+      "expected_behavior": "不应激活本skill，因为这是指标解释。",
+      "notes": "诱饵: 技术分析但非中枢。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想知道某公司今年利润能不能增长。",
+      "expected_behavior": "不应激活本skill。",
+      "notes": "基本面问题。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只知道大概在10到12之间震荡，能算中枢吗？",
+      "expected_behavior": "可说明可能需要本skill，但应要求补充三段次级别走势，不能硬算。",
+      "notes": "数据不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "should_not_trigger 必须通过。"
+}
+

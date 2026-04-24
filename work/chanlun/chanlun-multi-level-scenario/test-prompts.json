@@ -1,0 +1,53 @@
+{
+  "skill": "chanlun-multi-level-scenario",
+  "version": "0.1.0",
+  "source_book": "《缠论》 — 缠中说禅",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "日线还在中枢震荡，30分钟出现底背驰，请按缠论做三种情景预案。",
+      "expected_behavior": "应激活本skill，输出弱反弹、更大级别盘整、反趋势三类情景。",
+      "notes": "多级别冲突。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "5分钟下跌背驰后，怎么判断只是反弹还是反转？",
+      "expected_behavior": "应激活本skill，围绕最后中枢和反弹力度分类。",
+      "notes": "背驰后情景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "请不要预测，只给我接下来三种结构演化和各自确认条件。",
+      "expected_behavior": "应激活本skill，输出情景树和观察点。",
+      "notes": "预案式输出。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "缠论里什么是分型？",
+      "expected_behavior": "不应优先激活本skill，应解释术语或调用structure-parser。",
+      "notes": "基础术语诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我算中枢区间。",
+      "expected_behavior": "不应优先激活本skill，应调用zhongshu-mapper。",
+      "notes": "中枢计算诱饵。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我不知道现在是什么级别，但想知道是不是要反转。",
+      "expected_behavior": "可说明需要本skill的思路，但必须先要求补充级别和结构，不能预测反转。",
+      "notes": "级别缺失边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "should_not_trigger 必须通过。"
+}
+

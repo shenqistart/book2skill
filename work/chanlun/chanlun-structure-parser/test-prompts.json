@@ -1,0 +1,53 @@
+{
+  "skill": "chanlun-structure-parser",
+  "version": "0.1.0",
+  "source_book": "《缠论》 — 缠中说禅",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "请按缠论处理这些5分钟K线的包含关系，并标出顶底分型。",
+      "expected_behavior": "应激活本skill，先确认级别和high/low数据，再处理包含关系和分型。",
+      "notes": "明确要求结构解析。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这里从A到B到底算不算一笔？请按缠论规则判断。",
+      "expected_behavior": "应激活本skill，检查顶底交替和分型确认。",
+      "notes": "笔的判定场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "请先不要判断买卖点，只把这段走势拆成笔和线段。",
+      "expected_behavior": "应激活本skill，并避免输出交易建议。",
+      "notes": "用户明确要求基础结构。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这家公司财报很好，明天会不会涨？",
+      "expected_behavior": "不应激活本skill，因为这是基本面/预测问题。",
+      "notes": "诱饵: 股票相关但非结构分析。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "MACD红柱变短，是不是背驰？",
+      "expected_behavior": "不应优先激活本skill，应考虑chanlun-divergence-diagnosis。",
+      "notes": "相邻skill诱饵。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只有一张截图，没有高低点数据，你帮我画笔。",
+      "expected_behavior": "可激活本skill，但应说明需要图像或高低点数据，不能硬判。",
+      "notes": "数据不足边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "should_not_trigger 必须通过。"
+}
+

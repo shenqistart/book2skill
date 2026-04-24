@@ -1,0 +1,53 @@
+{
+  "skill": "chanlun-divergence-diagnosis",
+  "version": "0.1.0",
+  "source_book": "《缠论》 — 缠中说禅",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "A段上涨很强，B段回到0轴附近，C段创新高但MACD红柱面积明显小，按缠论是不是背驰？",
+      "expected_behavior": "应激活本skill，检查A-B-C和MACD辅助条件。",
+      "notes": "典型背驰诊断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个5分钟下跌背驰后，可能只是弱反弹还是能反转？",
+      "expected_behavior": "应激活本skill，并输出背驰后的情景分类。",
+      "notes": "背驰后转折级别。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "请判断这是趋势背驰还是盘整背驰。",
+      "expected_behavior": "应激活本skill，先识别走势类型，再区分两类背驰。",
+      "notes": "背驰分类。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我用PB和ROE判断这家公司贵不贵。",
+      "expected_behavior": "不应激活本skill。",
+      "notes": "基本面估值。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "请计算三段走势的中枢区间。",
+      "expected_behavior": "不应优先激活本skill，应使用chanlun-zhongshu-mapper。",
+      "notes": "相邻skill诱饵。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "MACD绿柱缩短了，是不是底背驰？我没有A-B-C段。",
+      "expected_behavior": "可激活本skill解释数据不足，要求补充级别和A-B-C段，不应直接确认背驰。",
+      "notes": "指标不足边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "should_not_trigger 必须通过。"
+}
+

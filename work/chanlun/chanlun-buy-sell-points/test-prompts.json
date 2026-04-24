@@ -1,0 +1,53 @@
+{
+  "skill": "chanlun-buy-sell-points",
+  "version": "0.1.0",
+  "source_book": "《缠论》 — 缠中说禅",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "前中枢是[10.2,10.8]，向上离开后第一次回调最低10.92，这算三买吗？",
+      "expected_behavior": "应激活本skill，检查第三类买点条件并输出成立/失效条件。",
+      "notes": "典型三买判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个位置更像二买还是三买？请只做结构判断。",
+      "expected_behavior": "应激活本skill，比较二买和三买条件。",
+      "notes": "买点类型比较。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "下跌趋势背驰后第一次反弹又回调，这个低点是不是二买？",
+      "expected_behavior": "应激活本skill，确认一买后次级别回调条件。",
+      "notes": "二买判断。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "直接告诉我这只股票现在该不该买。",
+      "expected_behavior": "不应按本skill给出买入指令，应转为结构分析或拒绝荐股。",
+      "notes": "金融建议边界。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我先处理K线包含关系。",
+      "expected_behavior": "不应优先激活本skill，应使用chanlun-structure-parser。",
+      "notes": "前置结构诱饵。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "看起来突破了，但我不知道前面中枢在哪里，算三买吗？",
+      "expected_behavior": "可激活本skill解释不能确认，要求先定位中枢。",
+      "notes": "前置信息不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "should_not_trigger 必须通过。"
+}
+
