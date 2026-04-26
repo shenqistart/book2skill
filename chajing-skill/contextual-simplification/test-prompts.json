@@ -1,0 +1,53 @@
+{
+  "skill": "contextual-simplification",
+  "version": "0.1.0",
+  "source_book": "《茶经》 — 陆羽",
+  "source_file": "chajing-skill/source/chajing.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想按《茶经》做户外茶事，但器具不全，哪些可以省？",
+      "expected_behavior": "应调用本 skill，按九之略判断可省和不可省。",
+      "notes": "典型简化。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "课堂演示《茶经》煮茶，没有风炉和都篮，怎么替代？",
+      "expected_behavior": "应调用本 skill，以功能替代方式判断。",
+      "notes": "课堂场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "《九之略》到底是在教偷懒，还是教场景化取舍？",
+      "expected_behavior": "应调用本 skill，解释简化原则。",
+      "notes": "概念辨析。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "怎么削减茶馆经营成本？",
+      "expected_behavior": "不应调用本 skill 作为商业成本削减方案。",
+      "notes": "商业诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我列完整《茶经》器具清单。",
+      "expected_behavior": "不应优先调用本 skill，应使用 tool-vessel-system。",
+      "notes": "相邻 skill。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "正式展览复原《茶经》茶席，能不能少几件器具？",
+      "expected_behavior": "应调用本 skill，但强调正式场景完整性要求更高。",
+      "notes": "正式场景边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

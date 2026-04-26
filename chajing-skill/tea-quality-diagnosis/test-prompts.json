@@ -1,0 +1,53 @@
+{
+  "skill": "tea-quality-diagnosis",
+  "version": "0.1.0",
+  "source_book": "《茶经》 — 陆羽",
+  "source_file": "chajing-skill/source/chajing.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这款茶叶外形很平整发黑，卖家说是好茶。请按《茶经》判断这个依据够不够。",
+      "expected_behavior": "应调用本 skill，指出不能只凭光黑平正判断，需回到采摘和制作链条。",
+      "notes": "品质诊断场景。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "按《茶经》，茶叶采得不合时、制作不精会有什么风险？",
+      "expected_behavior": "应调用本 skill，说明采制风险和边界。",
+      "notes": "采制风险。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我有一段茶样描述：春采嫩芽，叶卷，产自山间石地。请按陆羽的框架分析。",
+      "expected_behavior": "应调用本 skill，从环境、芽叶、采时、制作信息完整度分析。",
+      "notes": "茶样描述。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我查这款茶现在市场价多少钱。",
+      "expected_behavior": "不应调用本 skill，因为是价格查询。",
+      "notes": "诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "喝茶能不能治疗我的头痛？",
+      "expected_behavior": "不应按本 skill 给医学建议，应提示咨询专业医生。",
+      "notes": "医学边界。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只知道茶产自某现代知名产区，能按《茶经》判定好吗？",
+      "expected_behavior": "可说明需要本 skill 的框架，但应要求补充采摘、制作、形态和品饮信息。",
+      "notes": "信息不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

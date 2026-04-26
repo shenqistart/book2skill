@@ -1,0 +1,53 @@
+{
+  "skill": "water-fire-brewing-method",
+  "version": "0.1.0",
+  "source_book": "《茶经》 — 陆羽",
+  "source_file": "chajing-skill/source/chajing.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "请按《茶经》的一沸二沸三沸设计煮茶流程。",
+      "expected_behavior": "应调用本 skill，输出沸候信号和对应动作。",
+      "notes": "核心触发。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "陆羽为什么强调山水、江水、井水，以及火不能有膻腻？",
+      "expected_behavior": "应调用本 skill，解释水火对茶味的影响。",
+      "notes": "水火判断。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我想做唐代煮茶演示，请给我从炙茶到分盏的步骤。",
+      "expected_behavior": "应调用本 skill，输出完整动作链。",
+      "notes": "演示脚本。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "绿茶用80度水还是90度水泡？",
+      "expected_behavior": "不应直接调用本 skill 作为现代冲泡参数标准。",
+      "notes": "现代冲泡诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "咖啡手冲怎么控制水流？",
+      "expected_behavior": "不应调用本 skill。",
+      "notes": "非茶。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只有现代电陶炉，能不能复原《茶经》煮茶？",
+      "expected_behavior": "可调用本 skill 给古法逻辑，但应提示现代替代与安全边界。",
+      "notes": "现代替代。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

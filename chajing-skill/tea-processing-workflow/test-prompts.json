@@ -1,0 +1,53 @@
+{
+  "skill": "tea-processing-workflow",
+  "version": "0.1.0",
+  "source_book": "《茶经》 — 陆羽",
+  "source_file": "chajing-skill/source/chajing.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "请按《茶经》把采、蒸、捣、拍、焙、穿、封整理成制茶流程。",
+      "expected_behavior": "应调用本 skill，按七步流程输出并说明风险。",
+      "notes": "明确流程请求。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我想做一个《茶经》制茶教学演示，流程应该怎么安排？",
+      "expected_behavior": "应调用本 skill，并标注教学场景可再做简化判断。",
+      "notes": "教学演示。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这段古法制茶描述只有采摘和焙干，按陆羽看缺了什么？",
+      "expected_behavior": "应调用本 skill，检查缺失环节。",
+      "notes": "流程审查。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "现代红茶发酵温湿度应该设多少？",
+      "expected_behavior": "不应调用本 skill 作为现代工业参数来源。",
+      "notes": "现代工艺诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这款茶的包装设计好不好看？",
+      "expected_behavior": "不应调用本 skill。",
+      "notes": "非制茶流程。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我在户外只能演示部分步骤，哪些能省？",
+      "expected_behavior": "应说明本 skill 可给完整流程，但具体取舍应调用 contextual-simplification。",
+      "notes": "相邻 skill。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

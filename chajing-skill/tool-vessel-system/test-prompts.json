@@ -1,0 +1,53 @@
+{
+  "skill": "tool-vessel-system",
+  "version": "0.1.0",
+  "source_book": "《茶经》 — 陆羽",
+  "source_file": "chajing-skill/source/chajing.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "请按《茶经》给我列一套煮茶器具，并说明每件器具的作用。",
+      "expected_behavior": "应调用本 skill，按功能分组器具。",
+      "notes": "器具配置。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "二之具和四之器有什么区别？",
+      "expected_behavior": "应调用本 skill，区分制茶工具和煮饮器具。",
+      "notes": "体系解释。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我想做《茶经》茶席复原，哪些器具负责火、水、茶末和分饮？",
+      "expected_behavior": "应调用本 skill，按功能输出清单。",
+      "notes": "茶席复原。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这个唐代茶盏能卖多少钱？",
+      "expected_behavior": "不应调用本 skill 做古董估价。",
+      "notes": "收藏诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "现代盖碗冲泡绿茶几秒出汤？",
+      "expected_behavior": "不应优先调用本 skill。",
+      "notes": "现代冲泡。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我没有完整二十四器，可以用现代器具替代吗？",
+      "expected_behavior": "可调用本 skill 按功能找替代，并提示简化取舍需要 contextual-simplification。",
+      "notes": "替代边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

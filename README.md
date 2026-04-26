@@ -41,14 +41,33 @@
 
 进入 skill pack：[chanlun-skills](./chanlun-skills/)
 
+### 《茶经》Skills（6 个核心模块）
+
+**来源**：陆羽《茶经》公版文本，源文件保留于 [chajing-skill/source/chajing.md](./chajing-skill/source/chajing.md)。
+
+**解决问题**：茶叶品质判断、制茶流程检查、器具配置、水火煮茶法、品饮场景安排、场景化简化取舍。
+
+**特色**：把《茶经》从古籍文本转成可调用的茶事方法论，同时保留源文件和来源说明，方便审计。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这段茶样描述按《茶经》怎么看？ | [`tea-quality-diagnosis`](./chajing-skill/tea-quality-diagnosis/SKILL.md) |
+| 采、蒸、捣、拍、焙、穿、封流程怎么检查？ | [`tea-processing-workflow`](./chajing-skill/tea-processing-workflow/SKILL.md) |
+| 《茶经》里的器具如何按功能配置？ | [`tool-vessel-system`](./chajing-skill/tool-vessel-system/SKILL.md) |
+| 如何按水、火、沸候、投茶设计煮茶流程？ | [`water-fire-brewing-method`](./chajing-skill/water-fire-brewing-method/SKILL.md) |
+| 几人品饮、几盏、如何分茶？ | [`serving-tasting-context`](./chajing-skill/serving-tasting-context/SKILL.md) |
+| 户外或课堂演示时哪些器具/步骤可以省？ | [`contextual-simplification`](./chajing-skill/contextual-simplification/SKILL.md) |
+
+进入 skill pack：[chajing-skill](./chajing-skill/)
+
 ---
 
 ## 仓库目录规范
 
-未来每本书使用一个顶层目录，命名格式为：
+未来每本书使用一个顶层目录。当前仓库已有 `chanlun-skills/` 和 `chajing-skill/` 两种历史命名；新增书目前先确认命名，建议在 `<book-slug>-skill/` 与 `<book-slug>-skills/` 中保持项目内一致。
 
 ```text
-<book-slug>-skills/
+<book-slug>-skill(s)/
 ```
 
 例如：
@@ -66,6 +85,18 @@ book2skill/
 │   └── <skill-slug>/
 │       ├── SKILL.md
 │       └── test-prompts.json
+├── chajing-skill/
+│   ├── README.md
+│   ├── BOOK_OVERVIEW.md
+│   ├── INDEX.md
+│   ├── source/
+│   │   ├── chajing.md
+│   │   └── SOURCE.md
+│   ├── candidates/
+│   ├── rejected/
+│   └── <skill-slug>/
+│       ├── SKILL.md
+│       └── test-prompts.json
 └── future-book-skills/
     └── ...
 ```
@@ -75,6 +106,7 @@ book2skill/
 - `README.md`：面向使用者的介绍页
 - `BOOK_OVERVIEW.md`：整书理解、术语、批判和应用潜力
 - `INDEX.md`：skill 列表、调用顺序和关系图
+- `source/`：需要保留源文本时存放原始材料与来源说明
 - `candidates/`：候选方法论单元
 - `rejected/`：被淘汰单元和原因
 - `<skill-slug>/SKILL.md`：单个可调用 skill
@@ -140,4 +172,3 @@ book2skill/
 ## License
 
 本仓库生成内容按 MIT License 开源使用；原始书籍、课程或材料版权归原作者及相关权利方所有。
-

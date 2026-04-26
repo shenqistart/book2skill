@@ -1,0 +1,53 @@
+{
+  "skill": "serving-tasting-context",
+  "version": "0.1.0",
+  "source_book": "《茶经》 — 陆羽",
+  "source_file": "chajing-skill/source/chajing.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "按《茶经》，五个人品饮应该怎么分盏？",
+      "expected_behavior": "应调用本 skill，按人数和盏数规则分析。",
+      "notes": "人数分饮。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我想做一场《茶经》品饮课，怎么安排讲解和分茶次第？",
+      "expected_behavior": "应调用本 skill，输出品饮场景流程。",
+      "notes": "教学场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "陆羽为什么说茶汤冷了精华会散？这对品饮安排有什么影响？",
+      "expected_behavior": "应调用本 skill，说明乘热连饮和体验设计。",
+      "notes": "茶汤状态。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我做一个茶品牌发布会营销方案。",
+      "expected_behavior": "不应优先调用本 skill。",
+      "notes": "营销诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "酒席座次怎么安排？",
+      "expected_behavior": "不应调用本 skill。",
+      "notes": "非茶。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "十个人想体验《茶经》煮茶，一炉够吗？",
+      "expected_behavior": "应调用本 skill，并提示可能需要加炉或调整分饮。",
+      "notes": "边界人数。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+
