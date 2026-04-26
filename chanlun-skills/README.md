@@ -79,7 +79,7 @@ graph TD
 ## 仓库结构
 
 ```text
-chanlun/
+chanlun-skills/
 ├── README.md
 ├── INDEX.md
 ├── BOOK_OVERVIEW.md
@@ -112,14 +112,14 @@ chanlun/
 ### 方式一：先读索引
 
 ```text
-请读取 work/chanlun/INDEX.md，了解《缠论》skill 的调用顺序。
+请读取 chanlun-skills/INDEX.md，了解《缠论》skill 的调用顺序。
 然后根据我的走势描述，选择合适的 skill 做结构分析。
 ```
 
 ### 方式二：指定一个 skill
 
 ```text
-请读取 work/chanlun/chanlun-divergence-diagnosis/SKILL.md。
+请读取 chanlun-skills/chanlun-divergence-diagnosis/SKILL.md。
 我怀疑这里有顶背驰，请按 A-B-C 段、级别一致性、MACD 辅助条件检查，不要直接预测涨跌。
 ```
 
@@ -147,4 +147,3 @@ chanlun/
 - 来源：缠中说禅博客公开存档中的《教你炒股票》关键章节。
 - 方法：参考 [cangjie-skill](https://github.com/kangarooking/cangjie-skill) 的 RIA-TV++ / book2skill 流水线。
 - 边界：本 skill 只做结构化分析训练，不做荐股、喊单、收益承诺或具体买卖指令。
-
