@@ -1,4 +1,4 @@
-# Chanlun Skill — 缠论 AI-Agent Skills
+# book2skill — 缠论 AI-Agent Skills
 
 > 将《缠论》核心结构分析方法蒸馏为可调用的 AI-Agent Skills，用于走势复盘、技术分析训练和交易计划检查。
 
@@ -9,7 +9,7 @@
 
 ## 项目简介
 
-**Chanlun Skill** 是一个基于 [cangjie-skill](https://github.com/kangarooking/cangjie-skill) / book2skill 方法论生成的《缠论》技能包。
+**book2skill** 当前收录一个基于 [cangjie-skill](https://github.com/kangarooking/cangjie-skill) / book2skill 方法论生成的《缠论》技能包。
 
 它不是《缠论》原文合集，也不是荐股工具，而是把《缠论》中可复用的结构分析方法拆成 AI Agent 可以调用的 skill：
 
@@ -131,4 +131,3 @@ work/chanlun/
 ## License
 
 本仓库生成内容按 MIT 风格开源使用；原始《缠论》文本版权归原作者及相关权利方所有。本仓库只保留方法论结构化重写和必要来源线索，不替代原文阅读。
-
