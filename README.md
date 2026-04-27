@@ -116,14 +116,51 @@ book2skill/
 
 ## 如何使用
 
-### 方式 1：先读取某本书的索引
+### 方式 1：直接在 GitHub 上使用
+
+适合只是想试用，不想先 clone 仓库的用户。
+
+1. 打开本仓库首页，先在“现有 Skills 一览”里选择一本书。
+2. 进入对应的单书目录，例如 [chanlun-skills](./chanlun-skills/) 或 [chajing-skill](./chajing-skill/)。
+3. 先读该书的 `README.md`，判断这套 skill pack 是否适合你的问题。
+4. 再读该书的 `INDEX.md`，按推荐调用顺序选择一个或多个 skills。
+5. 把具体 `SKILL.md` 链接发给 AI，并说明你的任务、输入材料和输出要求。
+
+可直接复制这个提示词：
+
+```text
+请打开并遵循这个 GitHub skill：
+https://github.com/shenqistart/book2skill/blob/main/chajing-skill/water-fire-brewing-method/SKILL.md
+
+我的任务是：设计一次《茶经》煮茶演示。
+请按 skill 的步骤输出，不要超出 skill 的边界。
+```
+
+### 方式 2：clone 到本地后使用
+
+适合长期使用、二次修改或希望让 AI 一次读取多个文件的用户。
+
+```bash
+git clone https://github.com/shenqistart/book2skill.git
+cd book2skill
+```
+
+然后在 AI 工具中让它读取本地文件：
+
+```text
+请先读取 README.md，了解这个 book2skill 仓库。
+然后读取 chajing-skill/INDEX.md，根据我的问题选择合适的 skill。
+如果需要多个 skills，请说明调用顺序，再分别执行。
+```
+
+### 方式 3：先读取某本书的索引
 
 ```text
 请先读取 chanlun-skills/INDEX.md，了解这套 skills 的调用顺序。
 然后根据我的问题，选择合适的 skill 进行分析。
 ```
 
-### 方式 2：指定具体 skill
+### 方式 4：指定具体 skill
 
 ```text
 请读取 chanlun-skills/chanlun-buy-sell-points/SKILL.md，
@@ -131,13 +168,50 @@ book2skill/
 要求：只输出结构条件、成立条件、失效条件，不给买卖建议。
 ```
 
-### 方式 3：让 AI 学习整个仓库
+### 方式 5：让 AI 学习整个仓库
 
 ```text
 请学习这个 book2skill 仓库。
 每本书先读对应的 README.md 和 INDEX.md。
 当我的问题适合某个 skill 时，主动调用并说明调用理由。
 ```
+
+### 多个 skills 如何组合使用
+
+当问题跨越多个环节时，不要一次把所有 `SKILL.md` 都塞给 AI。推荐先读单书 `INDEX.md`，再按任务链路调用 2-4 个相关 skills。
+
+例如，《茶经》茶事演示可以这样调用：
+
+```text
+请读取 chajing-skill/INDEX.md。
+我的目标是做一次 20 分钟的《茶经》茶事演示。
+请按顺序调用：
+1. tool-vessel-system：列出必须器具和可替代器具。
+2. water-fire-brewing-method：设计水、火、沸候、投茶流程。
+3. contextual-simplification：判断课堂场景中哪些步骤可以省略。
+4. serving-tasting-context：安排几人、几盏、如何分饮。
+
+每一步都要标注依据来自哪个 skill，并说明不确定或不能现代化硬套的地方。
+```
+
+例如，《缠论》走势分析可以这样调用：
+
+```text
+请读取 chanlun-skills/INDEX.md。
+我会提供一段走势数据，请按顺序调用：
+1. chanlun-structure-parser：先标注分型、笔、线段。
+2. chanlun-zhongshu-mapper：再定位中枢和级别关系。
+3. chanlun-divergence-diagnosis：最后检查是否存在背驰条件。
+
+只做结构分析，不输出荐股、喊单、收益承诺或具体买卖指令。
+```
+
+使用原则：
+
+- **先选书，再选 skill**：不要跨书混用，除非你明确要做比较分析。
+- **先读 `INDEX.md`，再读 `SKILL.md`**：`INDEX.md` 负责路线图，`SKILL.md` 负责执行细则。
+- **一次调用少量相关 skills**：通常 1 个 skill 解决单点问题，2-4 个 skills 解决流程型问题。
+- **把边界写进提示词**：金融类不做买卖建议，古籍类不直接替代现代检测、医学或商业结论。
 
 ---
 
