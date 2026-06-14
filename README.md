@@ -60,6 +60,25 @@
 
 进入 skill pack：[chajing-skill](./chajing-skill/)
 
+### 《微信背后的产品观》Skills（6 个核心模块）
+
+**来源**：张小龙《微信背后的产品观》。原书为 2021 年出版物，本仓库不收录原文全文，仅保留方法论蒸馏与来源说明。
+
+**解决问题**：用户与群体洞察、需求心理挖掘、场景边界设计、产品结构演化、自然增长判断、产品气质与 UI 表达。
+
+**特色**：把微信产品观从“金句/案例”转成可调用的产品判断流程，重点保留边界：不机械套用微信、不用气质掩盖可用性、不用反 KPI 变成反数据。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这个产品判断真的理解用户和群体吗？ | [`human-group-sensing`](./wechat-product-philosophy-skill/human-group-sensing/SKILL.md) |
+| 用户说要这个功能，背后的心理诉求是什么？ | [`demand-psychology-mining`](./wechat-product-philosophy-skill/demand-psychology-mining/SKILL.md) |
+| 这个功能该做成主入口、隐藏、插件，还是不做？ | [`scenario-boundary-design`](./wechat-product-philosophy-skill/scenario-boundary-design/SKILL.md) |
+| 产品是不是被功能堆砌拖垮了？ | [`product-structure-evolution`](./wechat-product-philosophy-skill/product-structure-evolution/SKILL.md) |
+| 现在该推广、导流、整合或追 KPI 吗？ | [`natural-growth-judgment`](./wechat-product-philosophy-skill/natural-growth-judgment/SKILL.md) |
+| 产品文案、UI 和欢迎页是否有统一气质？ | [`product-spirit-expression`](./wechat-product-philosophy-skill/product-spirit-expression/SKILL.md) |
+
+进入 skill pack：[wechat-product-philosophy-skill](./wechat-product-philosophy-skill/)
+
 ---
 
 ## 仓库目录规范
@@ -92,6 +111,16 @@ book2skill/
 │   ├── source/
 │   │   ├── chajing.md
 │   │   └── SOURCE.md
+│   ├── candidates/
+│   ├── rejected/
+│   └── <skill-slug>/
+│       ├── SKILL.md
+│       └── test-prompts.json
+├── wechat-product-philosophy-skill/
+│   ├── README.md
+│   ├── BOOK_OVERVIEW.md
+│   ├── INDEX.md
+│   ├── source/
 │   ├── candidates/
 │   ├── rejected/
 │   └── <skill-slug>/

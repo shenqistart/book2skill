@@ -1,0 +1,52 @@
+{
+  "skill": "product-spirit-expression",
+  "version": "0.1.0",
+  "source_book": "《微信背后的产品观》 — 张小龙",
+  "source_file": "wechat-product-philosophy-skill/source/SOURCE.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们新版本欢迎页想列 8 个新功能，帮我按微信产品观改一下。",
+      "expected_behavior": "应调用本 skill，反对功能罗列，转向场景和价值观表达。",
+      "notes": "欢迎页。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个弹窗文案是“立即邀请好友吧”，感觉有点怪，帮我审。",
+      "expected_behavior": "应调用本 skill，检查讨好/强迫语气并改成人话。",
+      "notes": "文案气质。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们的界面每个区域都想突出，结果很乱，怎么用微信产品观改？",
+      "expected_behavior": "应调用本 skill，强调一个主题、默认按钮和条理清晰。",
+      "notes": "UI 条理。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写 10 条品牌广告 slogan。",
+      "expected_behavior": "不应优先调用本 skill，这是纯营销文案。",
+      "notes": "营销诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "把这个 SVG 图标改成红色。",
+      "expected_behavior": "不应调用本 skill，除非涉及产品气质判断。",
+      "notes": "视觉执行。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "实名认证页面需要很多说明文字，是不是坏体验？",
+      "expected_behavior": "应提示合规场景可需要显式说明，不能机械追求少文字。",
+      "notes": "合规边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
