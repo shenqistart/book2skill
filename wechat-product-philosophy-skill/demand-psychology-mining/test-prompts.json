@@ -1,0 +1,52 @@
+{
+  "skill": "demand-psychology-mining",
+  "version": "0.1.0",
+  "source_book": "《微信背后的产品观》 — 张小龙",
+  "source_file": "wechat-product-philosophy-skill/source/SOURCE.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "用户一直要求朋友圈分组，帮我判断这个需求背后的真实心理是什么。",
+      "expected_behavior": "应调用本 skill，挖掘隐私、关系压力和屏蔽少数人的诉求。",
+      "notes": "典型表层需求。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "竞品都有已读功能，我们要不要做？",
+      "expected_behavior": "应调用本 skill，分析发送者确认感和接收者压力之间的心理冲突。",
+      "notes": "竞品诱发需求。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我有个好点子：把所有功能入口都放首页，用户肯定能发现。",
+      "expected_behavior": "应调用本 skill，先否定点子并要求说明背后诉求和传播驱动力。",
+      "notes": "好点子风险。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "登录按钮点击后 500 报错，帮我定位接口问题。",
+      "expected_behavior": "不应调用本 skill，这是明确 bug。",
+      "notes": "工程缺陷。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "监管要求必须增加实名认证流程，帮我写技术方案。",
+      "expected_behavior": "不应优先调用本 skill，合规必做项先满足约束。",
+      "notes": "合规边界。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "用户说导出 Excel 太慢，这背后是不是存在感需求？",
+      "expected_behavior": "应提示谨慎，不要过度心理化，可能是性能和任务效率问题。",
+      "notes": "避免乱解释。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

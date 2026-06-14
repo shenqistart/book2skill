@@ -1,0 +1,52 @@
+{
+  "skill": "human-group-sensing",
+  "version": "0.1.0",
+  "source_book": "《微信背后的产品观》 — 张小龙",
+  "source_file": "wechat-product-philosophy-skill/source/SOURCE.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们做了一个社区产品，身边朋友都说好用，但普通用户不发内容，帮我按微信产品观分析。",
+      "expected_behavior": "应调用本 skill，区分身边用户和真实主体用户，分析环境、惰性和群体压力。",
+      "notes": "真实用户与群体行为。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "怎么理解用户是人，而不是数据？这对我的产品有什么影响？",
+      "expected_behavior": "应调用本 skill，把标签还原为具体环境和心理状态。",
+      "notes": "核心触发语。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个功能只有产品经理觉得爽，怎么判断普通人会不会用？",
+      "expected_behavior": "应调用本 skill，检查早期用户和普通用户差异。",
+      "notes": "产品经理误代用户。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这份用户年龄分布报表画成柱状图。",
+      "expected_behavior": "不应调用本 skill，这是数据可视化任务。",
+      "notes": "数据处理诱饵。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一个广告投放的人群包标签。",
+      "expected_behavior": "不应优先调用本 skill，除非用户要求反思标签背后的人。",
+      "notes": "广告标签诱饵。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们的 B 端后台用户说想要批量导出，是否要先分析人性？",
+      "expected_behavior": "可提示本 skill 不必优先调用，应先确认业务流程和权限审计。",
+      "notes": "专业工具边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

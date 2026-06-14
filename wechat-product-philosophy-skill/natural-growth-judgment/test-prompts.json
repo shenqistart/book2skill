@@ -1,0 +1,52 @@
+{
+  "skill": "natural-growth-judgment",
+  "version": "0.1.0",
+  "source_book": "《微信背后的产品观》 — 张小龙",
+  "source_file": "wechat-product-philosophy-skill/source/SOURCE.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "产品留存还一般，但老板想马上买量推广，按微信产品观怎么看？",
+      "expected_behavior": "应调用本 skill，检查自然增长信号和放大副作用。",
+      "notes": "推广判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们想把两个 50 分产品整合成一个平台，用户会不会更喜欢？",
+      "expected_behavior": "应调用本 skill，警惕战略整合替代真实需求。",
+      "notes": "整合诱惑。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "KPI 要求本月导入 10 万用户，但体验还没打磨好，怎么办？",
+      "expected_behavior": "应调用本 skill，分析流量进入成本和下一次拉动成本。",
+      "notes": "KPI 冲突。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我优化已经跑通渠道的广告标题 A/B 测试。",
+      "expected_behavior": "不应优先调用本 skill，这是成熟投放优化。",
+      "notes": "投放执行。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我统计上周新增用户数。",
+      "expected_behavior": "不应调用本 skill，这是数据统计。",
+      "notes": "数据任务。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "公益服务必须让所有市民迁移到新平台，没有自然增长怎么办？",
+      "expected_behavior": "应提示本 skill 只可部分参考，公共服务迁移有强外部约束。",
+      "notes": "非市场增长边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

@@ -1,0 +1,52 @@
+{
+  "skill": "product-structure-evolution",
+  "version": "0.1.0",
+  "source_book": "《微信背后的产品观》 — 张小龙",
+  "source_file": "wechat-product-philosophy-skill/source/SOURCE.md",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的 App 已经有 5 个 Tab，业务方还想加一个活动入口，怎么判断？",
+      "expected_behavior": "应调用本 skill，检查入口骨架、核心规则和替代结构。",
+      "notes": "结构约束。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "现在每个客户都要一个定制功能，产品越来越复杂，能不能抽象成平台？",
+      "expected_behavior": "应调用本 skill，区分类型和实例，做抽象压缩。",
+      "notes": "平台抽象。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "产品不是功能集合，而是有 DNA 的环境，这句话怎么用于我们的路线图？",
+      "expected_behavior": "应调用本 skill，输出 DNA、结构和演化检查。",
+      "notes": "产品 DNA。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把登录页 logo 往上移动 8px。",
+      "expected_behavior": "不应调用本 skill，这是视觉微调。",
+      "notes": "UI 微调。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "写一个双十一临时活动页文案。",
+      "expected_behavior": "不应优先调用本 skill，除非要纳入长期产品结构。",
+      "notes": "临时活动。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "合规要求增加多步骤审核，复杂度变高，是不是问题定义错了？",
+      "expected_behavior": "应提示谨慎，合规复杂性可能是真约束，不能简单砍掉。",
+      "notes": "真实复杂性边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
