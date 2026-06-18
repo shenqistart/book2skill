@@ -1,0 +1,51 @@
+{
+  "skill": "decision-checklist-lattice",
+  "version": "1.0.0",
+  "source_book": "《穷查理宝典》",
+  "darwin_compatible": true,
+  "minimum_pass_rate": 0.8,
+  "test_cases": [
+    {
+      "id": "trigger-001",
+      "type": "should_trigger",
+      "prompt": "我们准备把客服团队外包来降本，大家都觉得可行，请帮我从失败路径和盲区审计这个决策。",
+      "expected_behavior": "调用 skill，输出决策对象、逆向失败路径、能力圈边界、多元模型检查和建议。",
+      "notes": "重大团队决策且明确要求盲区审计。"
+    },
+    {
+      "id": "trigger-002",
+      "type": "should_trigger",
+      "prompt": "公司要进入一个我们不熟的新行业，创始团队很兴奋，但我担心能力圈不够，怎么判断？",
+      "expected_behavior": "调用 skill，重点检查能力圈、证据缺口和缩小试验方案。",
+      "notes": "能力圈是本 skill 的核心触发词。"
+    },
+    {
+      "id": "trigger-003",
+      "type": "should_trigger",
+      "prompt": "帮我为一次组织架构调整做反向检查清单，避免只看正面收益。",
+      "expected_behavior": "调用 skill，生成失败路径和 yes/no 检查清单。",
+      "notes": "组织调整属于高影响决策。"
+    },
+    {
+      "id": "nontrigger-001",
+      "type": "should_not_trigger",
+      "prompt": "帮我整理今天会议纪要，按行动项和负责人列出来。",
+      "expected_behavior": "不调用 skill；这是记录整理，不是决策审计。",
+      "notes": "缺少高风险判断。"
+    },
+    {
+      "id": "nontrigger-002",
+      "type": "should_not_trigger",
+      "prompt": "这只股票下周会涨吗？请用芒格的方法给买卖建议。",
+      "expected_behavior": "不调用 skill 给投资建议；应说明边界并拒绝确定性预测。",
+      "notes": "本 skill 不处理证券投资建议。"
+    },
+    {
+      "id": "edge-001",
+      "type": "edge_case",
+      "prompt": "我们有三个候选方案，但数据很少。你能不能先告诉我哪个最好？",
+      "expected_behavior": "可部分调用，先要求补充最低输入，并输出证据缺口和可缩小试验。",
+      "notes": "输入不足时不应直接拍板。"
+    }
+  ]
+}

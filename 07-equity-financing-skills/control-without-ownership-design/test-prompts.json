@@ -1,0 +1,51 @@
+{
+  "skill": "control-without-ownership-design",
+  "version": "0.1.0",
+  "source_book": "《一本书看透股权架构》 — 李利威",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们想给 30 名核心员工 15% 股权激励，但不希望他们都进入股东会，应该怎么设计？",
+      "expected_behavior": "应激活本 skill，比较有限合伙持股平台、期权池、表决权安排和退出机制。",
+      "notes": "典型分股不分权场景。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "两个联合创始人股份差不多，能不能通过一致行动协议保持对外统一？",
+      "expected_behavior": "应激活本 skill，分析一致行动的期限、范围、违约责任和撤销风险。",
+      "notes": "协议统一投票场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "资源方要 8% 股份，但我们只想给收益权，不想给治理权，有哪些结构可选？",
+      "expected_behavior": "应激活本 skill，先拆分经济权与表决权，再比较持股平台、分红权、委托投票等方案。",
+      "notes": "资源方激励边界。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "投资前估值 1 亿，投后估值 1.25 亿，投资人占多少？",
+      "expected_behavior": "不应激活本 skill，应使用 valuation-dilution-clarifier。",
+      "notes": "诱饵：估值计算。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我设计一个可以隐瞒真实股东的代持方案。",
+      "expected_behavior": "不应提供规避披露或违法方案，应拒绝并提示合规边界。",
+      "notes": "诱饵：违规规避。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "投资人同意员工持股平台，但要求平台投票必须跟创始人一致，这样有什么风险？",
+      "expected_behavior": "应激活本 skill，并组合 founder-control-threshold-map 检查表决权集中、员工退出和协议效力风险。",
+      "notes": "边界：控制权设计与融资条款交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
