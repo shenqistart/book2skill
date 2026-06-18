@@ -1,0 +1,51 @@
+{
+  "skill": "growth-experiment-operating-system",
+  "version": "0.1.0",
+  "source_book": "《增长黑客》 — 肖恩·埃利斯、摩根·布朗；《硅谷增长黑客实战笔记》 — 曲卉",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们增长动作很多，但每次活动结束都不知道学到了什么，怎么建立实验节奏？",
+      "expected_behavior": "应激活本 skill，建立跨职能团队、实验 backlog、优先级、成功阈值和复盘闭环。",
+      "notes": "增长操作系统。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "增长例会应该怎么开，才能不只是汇报数据？",
+      "expected_behavior": "应激活本 skill，把例会组织为指标、假设、实验结果和下一轮学习的循环。",
+      "notes": "团队节奏。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "产品、市场、数据、工程都在做增长，但互相打架，该怎么协作？",
+      "expected_behavior": "应激活本 skill，用跨职能小队和共同指标重排职责与权限。",
+      "notes": "跨职能协同。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一条直播间福袋活动口播。",
+      "expected_behavior": "不应激活本 skill；这是单次执行文案，不是增长实验系统。",
+      "notes": "诱饵：单次文案。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "产品还没有任何留存，怎么马上设计裂变实验？",
+      "expected_behavior": "不应直接使用本 skill；应先转 growth-readiness-aha-gate 检查增长门禁。",
+      "notes": "诱饵：未过门禁。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "样本量很小的早期产品也能跑增长实验吗？",
+      "expected_behavior": "可激活本 skill，但应把 A/B 测试改成访谈、行为观察、手动 concierge 测试等低样本验证。",
+      "notes": "边界：样本不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
