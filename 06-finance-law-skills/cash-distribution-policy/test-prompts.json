@@ -1,0 +1,51 @@
+{
+  "skill": "cash-distribution-policy",
+  "version": "0.1.0",
+  "source_book": "《应用公司理财》；《公司金融》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "公司账上现金很多，但还有几个扩张项目，应该分红还是继续留着？",
+      "expected_behavior": "应激活本 skill，先检验好项目、自由现金流和约束，再比较分红/留存。",
+      "notes": "现金分配。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "股东要求回购股票，管理层该怎么判断是否合理？",
+      "expected_behavior": "应激活本 skill，审查过剩现金、投资机会、估值信号和债务约束。",
+      "notes": "回购判断。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "创业公司融到一笔钱后，能不能给老股东分一部分？",
+      "expected_behavior": "应激活本 skill，并强调融资资金性质、章程、投资协议和现金安全垫。",
+      "notes": "创业场景。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "某上市公司回购后股价会不会涨？",
+      "expected_behavior": "不应激活本 skill 给股价预测；应拒绝证券预测或转为政策逻辑解释。",
+      "notes": "诱饵：股价预测。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "分红税怎么筹划最省税？",
+      "expected_behavior": "不应激活本 skill 给税务结论；应建议专业税务核验。",
+      "notes": "诱饵：税务筹划。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "公司有现金但融资环境很差，是否仍应分红？",
+      "expected_behavior": "可激活本 skill，但应把融资不确定性和现金安全垫作为关键约束。",
+      "notes": "边界：融资环境差。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

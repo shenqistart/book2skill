@@ -12,6 +12,8 @@ related_skills: [consensus-gap-mapping, business-model-viability-check]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据“功能价值与效率需求”“情绪价值与情感需求”“资产价值与投资需求”“产品创新——价值组合”“品牌价值”等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

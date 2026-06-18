@@ -1,0 +1,51 @@
+{
+  "skill": "valuation-assumption-triangulator",
+  "version": "0.1.0",
+  "source_book": "《应用公司理财》；《公司金融》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "投资人给了一个很高估值，我想知道 BP 里的 DCF 假设是否自洽。",
+      "expected_behavior": "应激活本 skill，审计现金流、增长、再投资、风险和终值假设。",
+      "notes": "估值假设审计。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们用同行收入倍数估值，但业务模式和毛利不同，这样靠谱吗？",
+      "expected_behavior": "应激活本 skill，检查可比公司经济特征和倍数适用性。",
+      "notes": "相对估值。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "模型假设高速增长，但资本开支很低，这会不会有问题？",
+      "expected_behavior": "应激活本 skill，校验增长与再投资是否匹配。",
+      "notes": "增长再投资矛盾。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这只股票明年能涨到多少钱？",
+      "expected_behavior": "不应激活本 skill 给目标价；应拒绝证券预测或转为假设审计。",
+      "notes": "诱饵：目标价。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我解释一下 DCF 是什么。",
+      "expected_behavior": "不应必然激活本 skill；这是概念解释，不是估值假设审计。",
+      "notes": "诱饵：定义。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "早期公司没有稳定现金流，还能做估值审计吗？",
+      "expected_behavior": "可激活本 skill，但应转为情景假设、里程碑和谈判变量审计，避免精确估值。",
+      "notes": "边界：早期公司。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

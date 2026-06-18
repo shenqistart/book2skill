@@ -13,6 +13,8 @@ related_skills: [product-structure-evolution, scenario-boundary-design]
 
 ## R — 来源
 
+> 原书依据见本节来源说明。
+
 依据《气质篇》《UI篇》中关于产品气质、人文意识、欢迎页、文字表达、条理清晰、少用 Tips、每个界面一个主题等论述。
 
 ## I — 方法论骨架

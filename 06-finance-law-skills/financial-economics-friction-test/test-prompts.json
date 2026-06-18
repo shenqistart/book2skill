@@ -1,0 +1,51 @@
+{
+  "skill": "financial-economics-friction-test",
+  "version": "0.1.0",
+  "source_book": "《金融经济学二十五讲》；《公司金融》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "CAPM 算出来的折现率和市场现实差很多，模型是不是失效了？",
+      "expected_behavior": "应激活本 skill，检查均衡模型前提、风险定义和市场摩擦。",
+      "notes": "CAPM 前提。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "如果无套利成立，为什么这个套利机会还存在？",
+      "expected_behavior": "应激活本 skill，检查交易成本、卖空限制、融资约束和执行风险。",
+      "notes": "无套利边界。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "市场有效假说是不是意味着我们不用分析公司？",
+      "expected_behavior": "应激活本 skill，区分信息、交易成本、流动性和模型用途。",
+      "notes": "有效市场。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天这个期权该不该买？",
+      "expected_behavior": "不应激活本 skill 给交易建议；应拒绝具体买卖建议。",
+      "notes": "诱饵：交易建议。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "CAPM 的公式是什么？",
+      "expected_behavior": "不应必然激活本 skill；这是概念和公式解释，不是模型前提检查。",
+      "notes": "诱饵：公式查询。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们只想用 CAPM 做一个粗略 hurdle rate，可以吗？",
+      "expected_behavior": "可激活本 skill，但应说明它只能作为粗略输入，并列出需做敏感性分析的前提。",
+      "notes": "边界：粗略使用。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

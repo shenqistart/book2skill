@@ -1,0 +1,51 @@
+{
+  "skill": "pyramid-communication-logic",
+  "version": "1.0.0",
+  "source_book": "《金字塔原理》",
+  "darwin_compatible": true,
+  "minimum_pass_rate": 0.8,
+  "test_cases": [
+    {
+      "id": "trigger-001",
+      "type": "should_trigger",
+      "prompt": "我要写一页纸说明为什么下季度只保留两个 OKR，但现在材料很散，帮我组织结构。",
+      "expected_behavior": "调用 skill，输出读者问题、结论、SCQA、分组理由和反对意见。",
+      "notes": "OKR 沟通材料。"
+    },
+    {
+      "id": "trigger-002",
+      "type": "should_trigger",
+      "prompt": "复盘报告写了很多事实，但老板说看不出结论，帮我按金字塔重构。",
+      "expected_behavior": "调用 skill，结论先行并检查上下统摄和逻辑顺序。",
+      "notes": "结构化复盘。"
+    },
+    {
+      "id": "trigger-003",
+      "type": "should_trigger",
+      "prompt": "我们要向全员解释取消一个审批流程，如何让大家理解原因和边界？",
+      "expected_behavior": "调用 skill，围绕听众问题和 SCQA 组织文化变更沟通。",
+      "notes": "文化变更说明。"
+    },
+    {
+      "id": "nontrigger-001",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这段文字改得更有诗意、更像品牌广告语。",
+      "expected_behavior": "不调用 skill；这是创意文案，不是论证结构。",
+      "notes": "避免把金字塔用于文案润色。"
+    },
+    {
+      "id": "nontrigger-002",
+      "type": "should_not_trigger",
+      "prompt": "我没有任何数据，但想写一份看起来很有说服力的报告。",
+      "expected_behavior": "不应直接调用生成包装；应提示缺少事实和证据。",
+      "notes": "不能用结构掩盖证据不足。"
+    },
+    {
+      "id": "edge-001",
+      "type": "edge_case",
+      "prompt": "我有结论也有事实，但它们互相支撑不上，能不能帮我强行组织一下？",
+      "expected_behavior": "调用 skill 进行结构诊断，并明确指出事实不能支撑结论的部分。",
+      "notes": "测试边界与诚实反馈。"
+    }
+  ]
+}

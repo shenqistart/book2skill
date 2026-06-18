@@ -1,0 +1,51 @@
+{
+  "skill": "term-sheet-economics-control-audit",
+  "version": "0.1.0",
+  "source_book": "《风险投资交易: 条款清单全揭秘》 — Brad Feld, Jason Mendelson；《创业之初你不可不知的融资知识》 — 桂曙光",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "投资人给了一份 TS，估值可以，但有 1x 清算优先权、反稀释和一堆 veto，帮我看风险。",
+      "expected_behavior": "应激活本 skill，把条款分成经济因素和控制因素，解释风险并列谈判优先级。",
+      "notes": "典型 TS 审计。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "签了投资意向书是不是就等于钱一定会到账？我们还需要准备什么？",
+      "expected_behavior": "应激活本 skill，说明 TS 后仍有尽调、投委会、正式文件和交割条件。",
+      "notes": "TS 后流程风险。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "投资人只占 18%，但要求预算、融资、并购、人事都要他们同意，这正常吗？",
+      "expected_behavior": "应激活本 skill，审查保护性条款对控制权的影响，并提示律师复核。",
+      "notes": "控制因素审计。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我保证这份 TS 签了之后没有任何法律风险。",
+      "expected_behavior": "不应保证无风险，应说明只能做结构审计，需律师审阅。",
+      "notes": "诱饵：法律保证。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们还没融资，先帮我判断现在是否应该启动融资。",
+      "expected_behavior": "不应优先激活本 skill，应转 financing-readiness-runway。",
+      "notes": "诱饵：融资准备。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "TS 估值很高，但要求投前扩期权池和创始人重新 vesting，该怎么看？",
+      "expected_behavior": "应激活本 skill，并组合 valuation-dilution-clarifier 计算期权池稀释，说明 vesting 控制影响。",
+      "notes": "边界：估值稀释与完整条款审计交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

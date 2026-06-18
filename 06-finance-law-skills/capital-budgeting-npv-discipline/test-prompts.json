@@ -1,0 +1,51 @@
+{
+  "skill": "capital-budgeting-npv-discipline",
+  "version": "0.1.0",
+  "source_book": "《应用公司理财》；《公司金融 原书第12版 基础篇》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们要不要花 300 万买一套自动化设备？它能降低人工成本，但会占用现金。",
+      "expected_behavior": "应激活本 skill，重建增量现金流、残值、营运资本和机会成本，再判断 NPV 纪律。",
+      "notes": "典型资本预算。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "两个新产品线都说 ROI 很高，但团队只能做一个，该怎么选？",
+      "expected_behavior": "应激活本 skill，识别互斥项目，比较价值增量而不是只看 ROI 百分比。",
+      "notes": "互斥项目。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个功能已经投入半年，继续做还要再花 80 万，要不要继续？",
+      "expected_behavior": "应激活本 skill，排除沉没成本，只评估继续投入的增量现金流和替代用途。",
+      "notes": "沉没成本诱惑。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我计算这家公司合理的股权估值区间。",
+      "expected_behavior": "不应直接激活本 skill；应转 valuation-assumption-triangulator，必要时引用项目 NPV 作为组成部分。",
+      "notes": "诱饵：公司估值。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这份投资协议里的清算优先权是否合法？",
+      "expected_behavior": "不应激活本 skill，应转法律风险地图并提示专业律师复核。",
+      "notes": "诱饵：法律效力。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "项目现金流大概率为正，但风险明显高于主业，折现率怎么处理？",
+      "expected_behavior": "可先用本 skill 建现金流，再转 risk-return-hurdle-rate 设定风险调整门槛。",
+      "notes": "边界：现金流与资本成本组合。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
