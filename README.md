@@ -195,6 +195,69 @@
 
 进入 skill pack：[05-growth-and-traffic-skills](./05-growth-and-traffic-skills/)
 
+### `06_财务金融和法律` Skills（8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `06_财务金融和法律` 分类，覆盖《创业投资法律手册》《公司金融》《金融经济学二十五讲》《应用公司理财》等书；《什么是金融》本地 OCR 未通过 quote-level Source Gate，暂只作为书目背景记录。
+
+**解决问题**：公司财务问题分流、资本预算、风险收益、资本结构、估值假设、现金分配、金融模型边界和创业法律资本风险。
+
+**分类导航**：这些 finance/law skills 的调用顺序、替代与互补关系见 [FINANCE_LAW_SKILL_TAXONOMY.md](./FINANCE_LAW_SKILL_TAXONOMY.md)。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这是投资、融资、估值、分红还是法律问题？ | [`finance-question-router`](./06-finance-law-skills/finance-question-router/SKILL.md) |
+| 一个项目、设备、并购或产品线值不值得做？ | [`capital-budgeting-npv-discipline`](./06-finance-law-skills/capital-budgeting-npv-discipline/SKILL.md) |
+| 折现率、资本成本、风险溢价或 beta 怎么处理？ | [`risk-return-hurdle-rate`](./06-finance-law-skills/risk-return-hurdle-rate/SKILL.md) |
+| WACC 是否适用，什么时候要用 APV？ | [`capital-structure-apv-check`](./06-finance-law-skills/capital-structure-apv-check/SKILL.md) |
+| DCF、倍数、融资估值或并购报价靠谱吗？ | [`valuation-assumption-triangulator`](./06-finance-law-skills/valuation-assumption-triangulator/SKILL.md) |
+| 要不要分红、回购或留存现金？ | [`cash-distribution-policy`](./06-finance-law-skills/cash-distribution-policy/SKILL.md) |
+| CAPM、无套利或有效市场模型为什么解释不了现实？ | [`financial-economics-friction-test`](./06-finance-law-skills/financial-economics-friction-test/SKILL.md) |
+| 创始人股权、章程、IP、投资协议有什么法律风险？ | [`startup-legal-capital-map`](./06-finance-law-skills/startup-legal-capital-map/SKILL.md) |
+
+进入 skill pack：[06-finance-law-skills](./06-finance-law-skills/)
+
+### `07_股权分配和融资` Skills（7 本 / 8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `07_股权分配和融资` 分类，覆盖《穿越寒冬》《超级天使投资》《风险投资交易》《创业之初你不可不知的融资知识》《给你一个亿你能干什么》《一本书看透股权架构》《股权战争》。
+
+**解决问题**：创始人分股、控制权阈值、钱权分离、融资准备、投资人匹配、估值稀释、Term Sheet 审计、天使投资组合纪律和股权冲突预演。
+
+**特色**：这是一个多书分类级 skill pack，重点整理书之间关系，帮助 agent 在“内部分股 → 外部融资 → 条款审计 → 冲突预演”链路中选择合适 skill。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 三个创始人怎么分股才不僵局？ | [`founder-control-threshold-map`](./07-equity-financing-skills/founder-control-threshold-map/SKILL.md) |
+| 要给员工股权但不想治理失控 | [`control-without-ownership-design`](./07-equity-financing-skills/control-without-ownership-design/SKILL.md) |
+| 公司快没钱了，现在该不该融资？ | [`financing-readiness-runway`](./07-equity-financing-skills/financing-readiness-runway/SKILL.md) |
+| 有多个投资人，不知道选谁 | [`investor-fit-signal-filter`](./07-equity-financing-skills/investor-fit-signal-filter/SKILL.md) |
+| 投资人说估值很高，但我看不懂稀释 | [`valuation-dilution-clarifier`](./07-equity-financing-skills/valuation-dilution-clarifier/SKILL.md) |
+| 收到 Term Sheet，想知道哪些条款危险 | [`term-sheet-economics-control-audit`](./07-equity-financing-skills/term-sheet-economics-control-audit/SKILL.md) |
+| 我想做天使投资 | [`angel-portfolio-discipline`](./07-equity-financing-skills/angel-portfolio-discipline/SKILL.md) |
+| 担心未来股东翻脸或控制权争夺 | [`equity-conflict-pre-mortem`](./07-equity-financing-skills/equity-conflict-pre-mortem/SKILL.md) |
+
+进入 skill pack：[07-equity-financing-skills](./07-equity-financing-skills/)
+
+### `08_团队建设` Skills（7 本 / 8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `08_团队建设` 分类，覆盖《穷查理宝典》《高效能人士的七个习惯》《金字塔原理》《创造时间》、两本 OKR 书和《奈飞文化手册》。
+
+**解决问题**：团队重大决策防错、信任协作、每日重点执行、结构化沟通、OKR 设计与运行、自由责任文化、人才密度和角色适配。
+
+**分类导航**：这些团队建设 skills 的书籍关系、组合方式和推荐调用边界见 [TEAM_BUILDING_SKILL_TAXONOMY.md](./TEAM_BUILDING_SKILL_TAXONOMY.md)。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这个团队决策会不会有盲区或失败路径？ | [`decision-checklist-lattice`](./08-team-building-skills/decision-checklist-lattice/SKILL.md) |
+| 团队互相甩锅、不信任，怎么转成行动？ | [`inside-out-trust-shift`](./08-team-building-skills/inside-out-trust-shift/SKILL.md) |
+| 大家很忙但重要事没人推进，今天该抓什么？ | [`daily-highlight-focus-loop`](./08-team-building-skills/daily-highlight-focus-loop/SKILL.md) |
+| 战略、复盘或 OKR 材料讲不清楚？ | [`pyramid-communication-logic`](./08-team-building-skills/pyramid-communication-logic/SKILL.md) |
+| OKR 像任务清单、KPI 或口号，怎么改？ | [`okr-quality-design`](./08-team-building-skills/okr-quality-design/SKILL.md) |
+| OKR 定了但缺少对齐、追踪和复盘？ | [`okr-alignment-review-cadence`](./08-team-building-skills/okr-alignment-review-cadence/SKILL.md) |
+| 流程太多，如何用自由、责任和坦诚替代控制？ | [`freedom-responsibility-culture`](./08-team-building-skills/freedom-responsibility-culture/SKILL.md) |
+| 团队能力、岗位和未来任务不匹配怎么办？ | [`talent-density-role-fit`](./08-team-building-skills/talent-density-role-fit/SKILL.md) |
+
+进入 skill pack：[08-team-building-skills](./08-team-building-skills/)
+
 ---
 
 ## 仓库目录规范

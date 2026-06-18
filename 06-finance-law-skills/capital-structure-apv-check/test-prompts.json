@@ -1,0 +1,51 @@
+{
+  "skill": "capital-structure-apv-check",
+  "version": "0.1.0",
+  "source_book": "《公司金融 原书第12版 基础篇》；《应用公司理财》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们准备用大量债务收购一家企业，前两年杠杆很高，之后慢慢还债，还能用 WACC 吗？",
+      "expected_behavior": "应激活本 skill，指出资本结构动态变化，优先考虑 APV 拆分基础价值和融资副效应。",
+      "notes": "高杠杆动态资本结构。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "政府给低息贷款，这会不会让本来 NPV 为负的项目变得值得做？",
+      "expected_behavior": "应激活本 skill，把项目经营价值和补贴贷款价值分开计算。",
+      "notes": "融资副效应。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "是不是债务越便宜，公司估值就越高？",
+      "expected_behavior": "应激活本 skill，同时检查税盾、财务困境成本、灵活性损失和契约限制。",
+      "notes": "债务成本误解。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这个新设备是否值得购买？目前没有任何融资方案。",
+      "expected_behavior": "不应优先激活本 skill，应先用 capital-budgeting-npv-discipline。",
+      "notes": "诱饵：纯项目 NPV。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "清算优先权在中国法院会怎么判？",
+      "expected_behavior": "不应激活本 skill，应转 startup-legal-capital-map 并提示法律专业复核。",
+      "notes": "诱饵：法律效力。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们这轮融资是可转债，既影响资本结构，也影响未来股权稀释。",
+      "expected_behavior": "应激活本 skill 识别融资副效应，并组合 startup-legal-capital-map 检查条款边界。",
+      "notes": "边界：融资结构与法律条款交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

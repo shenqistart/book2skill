@@ -43,3 +43,13 @@
 ## 审核备注
 
 本地审核采用自动结构校验 + 人工方法论复核。若后续接入 darwin-skill，可使用各 skill 的 `test-prompts.json` 继续进化。
+
+## 本地验证
+
+已运行：
+
+```bash
+node scripts/validate-book2skill.js 02-entrepreneurship-thinking-skills
+```
+
+结果：`Validation passed: 02-entrepreneurship-thinking-skills (10 skills)`。
