@@ -1,0 +1,51 @@
+{
+  "skill": "north-star-growth-model",
+  "version": "0.1.0",
+  "source_book": "《硅谷增长黑客实战笔记》 — 曲卉",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的产品、运营、市场 KPI 都不同，怎么定一个北极星指标？",
+      "expected_behavior": "应激活本 skill，从用户价值出发提出候选北极星并拆输入变量。",
+      "notes": "北极星选择。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "GMV 是不是我们的北极星？还是应该看更接近用户价值的指标？",
+      "expected_behavior": "应激活本 skill，检查 GMV 是否代表用户价值，并剔除虚荣或滞后指标。",
+      "notes": "虚荣指标边界。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "帮我把这个社区产品的增长模型拆成可实验的输入变量。",
+      "expected_behavior": "应激活本 skill，输出北极星、关键行为漏斗、输入变量和优先瓶颈。",
+      "notes": "增长模型拆解。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "产品刚上线，没有留存数据，也不知道用户为什么留下。",
+      "expected_behavior": "不应优先激活本 skill；应先用 growth-readiness-aha-gate 验证啊哈时刻。",
+      "notes": "诱饵：未过门禁。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我给本周促销活动定一个点击率目标。",
+      "expected_behavior": "不应激活本 skill；这是单次活动指标，不是北极星模型。",
+      "notes": "诱饵：活动 KPI。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "双边平台既要买家活跃也要卖家供给，北极星怎么避免偏一边？",
+      "expected_behavior": "可激活本 skill，但应提示多边平台要把供需质量和平衡作为输入变量或护栏指标。",
+      "notes": "边界：多边平台。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

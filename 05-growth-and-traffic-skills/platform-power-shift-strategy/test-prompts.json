@@ -1,0 +1,51 @@
+{
+  "skill": "platform-power-shift-strategy",
+  "version": "0.1.0",
+  "source_book": "《流媒体时代》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "短视频平台算法变了，我们的内容分发掉了一半，要不要做自有渠道？",
+      "expected_behavior": "应激活本 skill，分析平台角色、权力来源、依赖程度和可保留资产。",
+      "notes": "平台规则变化。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "内容方越来越依赖平台推荐和数据，怎么判断长期谈判地位？",
+      "expected_behavior": "应激活本 skill，拆解数据、推荐、用户关系和定价权。",
+      "notes": "平台权力。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "直播平台抽佣提高，我们是否应该分散平台或做私域会员？",
+      "expected_behavior": "应激活本 skill，输出深耕、分散、自建、谈判或退出的条件。",
+      "notes": "平台抽佣与自有资产。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我想 10 个短视频爆款标题。",
+      "expected_behavior": "不应激活本 skill；这是内容创意执行，不是平台权力分析。",
+      "notes": "诱饵：短期选题。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个版权合同会不会败诉？请直接判断。",
+      "expected_behavior": "不应激活本 skill 给法律结论；应提示专业法律意见。",
+      "notes": "诱饵：法律争议。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "平台给我们带来 80% 收入，但也不给用户数据，应该马上退出吗？",
+      "expected_behavior": "可激活本 skill，但应避免简单退出，先评估依赖、替代渠道和可迁移资产。",
+      "notes": "边界：高依赖但不可贸然退出。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

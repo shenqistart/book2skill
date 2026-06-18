@@ -1,0 +1,51 @@
+{
+  "skill": "bullseye-channel-selection",
+  "version": "0.1.0",
+  "source_book": "《拉新》 — Gabriel Weinberg、Justin Mares",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们不知道该选 SEO、投放、BD 还是短视频做获客，能不能用靶心法筛渠道？",
+      "expected_behavior": "应激活本 skill，先列外环渠道，再设计中环低成本测试并判断内环核心渠道。",
+      "notes": "典型渠道选择。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "熟悉的广告渠道成本越来越高，团队还是只会投广告，怎么跳出舒适区找新渠道？",
+      "expected_behavior": "应激活本 skill，要求扫描不熟悉但可行的渠道，并用测试比较质量。",
+      "notes": "反舒适区。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "帮我为一个 B2B SaaS 设计三种低成本获客渠道测试。",
+      "expected_behavior": "应激活本 skill，输出候选渠道、测试设计、指标和判断标准。",
+      "notes": "中环测试。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "产品刚上线没有留存，也没人说用完很惊喜，现在要不要大投放？",
+      "expected_behavior": "不应优先激活本 skill；应先用 growth-readiness-aha-gate 做增长门禁。",
+      "notes": "诱饵：未过增长门禁。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们已经确定投放抖音，请帮我写 10 条广告文案。",
+      "expected_behavior": "不应激活本 skill；这是已定渠道后的创意执行。",
+      "notes": "诱饵：投放素材。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们只能测试一个渠道，因为预算很少，还能用靶心法吗？",
+      "expected_behavior": "可激活本 skill，但应先做外环粗筛，再说明只能进入一个中环测试的风险。",
+      "notes": "边界：资源极少。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

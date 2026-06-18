@@ -1,0 +1,51 @@
+{
+  "skill": "repeat-customer-experience-loop",
+  "version": "0.1.0",
+  "source_book": "《回头客战略》 — 谢家华",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们投放越来越贵，老客复购也一般，怎么从体验上降低获客压力？",
+      "expected_behavior": "应激活本 skill，先拆分增长成本和体验断点，再设计复购、推荐和体验资产指标。",
+      "notes": "流量成本与复购。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "客服和售后一直被当成本中心，但我怀疑它们影响品牌口碑，该怎么评估？",
+      "expected_behavior": "应激活本 skill，把客服售后识别为品牌触点和回头客循环的一部分。",
+      "notes": "核心职能判断。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们有不少首单用户，但买完就走，会员群也没有自然推荐。",
+      "expected_behavior": "应激活本 skill，检查履约、售后、复购理由和推荐触发。",
+      "notes": "一次购买无法沉淀。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我比较一下巨量引擎和小红书这周的 CPM 哪个更便宜。",
+      "expected_behavior": "不应激活本 skill；这是实时渠道价格问题，需要另行查证或使用渠道投放分析。",
+      "notes": "诱饵：短期投放报价。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个一次性政府采购项目怎么提高复购率？",
+      "expected_behavior": "不应机械使用本 skill；应先指出业务低频一次性，复购循环可能不是主要增长路径。",
+      "notes": "诱饵：无复购场景。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们既想改善老客体验，也想做私域社群，应该先用哪个框架？",
+      "expected_behavior": "应先用本 skill 检查体验和复购底盘，再转 relationship-flywheel-private-domain 设计关系运营。",
+      "notes": "边界：体验底盘与私域。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
