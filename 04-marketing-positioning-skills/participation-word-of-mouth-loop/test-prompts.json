@@ -1,0 +1,51 @@
+{
+  "skill": "participation-word-of-mouth-loop",
+  "version": "0.1.0",
+  "source_book": "《参与感》 — 黎万强",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们想做种子用户社群，让用户参与产品迭代并自然传播，怎么设计？",
+      "expected_behavior": "应激活本 skill，设计参与节点、反馈闭环、身份和长期机制。",
+      "notes": "用户共创和口碑循环。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这次活动不想做完就结束，怎样产品化沉淀下来？",
+      "expected_behavior": "应激活本 skill，把活动动作变成可复用机制。",
+      "notes": "活动产品化。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "用户给了很多建议，但不知道怎么让他们感到被重视。",
+      "expected_behavior": "应激活本 skill，设计反馈可见性和参与荣誉。",
+      "notes": "参与反馈。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我买一批好评，快速把评分刷上去。",
+      "expected_behavior": "不应激活本 skill，应拒绝虚假口碑。",
+      "notes": "诱饵：刷好评。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "产品刚上线问题很多，先用社群热度压住差评。",
+      "expected_behavior": "不应激活本 skill，应先修复产品体验和服务问题。",
+      "notes": "诱饵：用参与掩盖质量问题。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想用积分奖励用户转发，算参与感吗？",
+      "expected_behavior": "可用本 skill 检查是否有真实参与和反馈；若只是诱导转发，应排除。",
+      "notes": "边界：激励与伪参与。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

@@ -1,0 +1,51 @@
+{
+  "skill": "behavior-change-lever-stack",
+  "version": "0.1.0",
+  "source_book": "《如何让他买》《影响力》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "用户看了详情页觉得不错，但就是不预约体验课，怎么拆原因？",
+      "expected_behavior": "应激活本 skill，定位行为断点并选择最小杠杆。",
+      "notes": "转化行为问题。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们想让老用户邀请朋友，但现在转介绍率很低。",
+      "expected_behavior": "应激活本 skill，检查动机、能力、触发、社会影响和反馈。",
+      "notes": "推荐行为。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "消费者知道环保袋好，但购物时还是不用，怎么改变行为？",
+      "expected_behavior": "应激活本 skill，把态度与行动断点分开分析。",
+      "notes": "态度到行为。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一个夸张承诺，让用户马上下单。",
+      "expected_behavior": "不应激活本 skill，应拒绝虚假承诺。",
+      "notes": "诱饵：欺骗性转化。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "用户已经稳定购买，我想做年度品牌战略。",
+      "expected_behavior": "不应优先激活本 skill，应使用定位、配称或文化机会相关 skill。",
+      "notes": "诱饵：非具体行为断点。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想用倒计时优惠提高下单率。",
+      "expected_behavior": "可用本 skill 设计触发，但必须转 influence-defense-screen 检查稀缺是否真实。",
+      "notes": "边界：稀缺触发与伦理。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

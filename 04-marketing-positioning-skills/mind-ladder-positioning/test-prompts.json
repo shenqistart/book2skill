@@ -1,0 +1,51 @@
+{
+  "skill": "mind-ladder-positioning",
+  "version": "0.1.0",
+  "source_book": "《定位》《21世纪的定位》《升级定位》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们做的是 AI 会议助手，竞品都说自己更智能，我们到底该怎么定位？",
+      "expected_behavior": "应激活本 skill，先画目标用户的心智阶梯，再判断可占据位置。",
+      "notes": "品牌定位问题。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个消费品牌卖点很多，但用户好像记不住，我们应该让它代表什么？",
+      "expected_behavior": "应激活本 skill，把卖点压缩成一个心智位置。",
+      "notes": "卖点过多导致定位不清。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们的品牌要年轻化、专业化、国际化，这样的定位会不会太空？",
+      "expected_behavior": "应激活本 skill，检查这些词是否对应顾客心智中的真实位置。",
+      "notes": "模糊形容词定位。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写 10 条朋友圈促销文案。",
+      "expected_behavior": "不应激活本 skill，这是文案生成，不是定位诊断。",
+      "notes": "诱饵：执行文案。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个广告投放的 CPM 是否划算？",
+      "expected_behavior": "不应激活本 skill，需要投放数据和渠道分析。",
+      "notes": "诱饵：媒体投放。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们准备改 logo，顺便想想品牌定位。",
+      "expected_behavior": "可先激活本 skill 明确心智位置，再把视觉问题交给符号或设计流程。",
+      "notes": "边界：视觉需求背后可能有定位问题。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
