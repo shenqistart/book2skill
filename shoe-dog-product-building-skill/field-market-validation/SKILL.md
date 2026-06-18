@@ -12,6 +12,8 @@ related_skills: [athlete-feedback-product-loop]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据奈特从跑道、教练、跑者和第一家零售店开始验证跑鞋需求的早期章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

@@ -12,6 +12,8 @@ related_skills: [athlete-feedback-product-loop]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据 Nike 命名、Swoosh、普雷方丹、奥运亮相和“不是只是一双鞋”的章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

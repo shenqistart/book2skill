@@ -12,6 +12,8 @@ related_skills: [supplier-dependence-risk]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据 Nike 早期高速增长、银行压力、日商岩井融资和上市前现金流危机。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

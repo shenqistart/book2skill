@@ -158,7 +158,7 @@ function checkIndexLinks(skills) {
 
   const index = read("INDEX.md");
   const linkedSkills = new Set();
-  const linkPattern = /\]\(\.\/([^/)]+)\/SKILL\.md\)/g;
+  const linkPattern = /\]\((?:\.\/)?([^/)]+)\/SKILL\.md\)/g;
   let match;
 
   while ((match = linkPattern.exec(index)) !== null) {

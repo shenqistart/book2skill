@@ -13,6 +13,8 @@ related_skills: [product-structure-evolution, demand-psychology-mining]
 
 ## R — 来源
 
+> 原书依据见本节来源说明。
+
 依据书中关于自然增长、KPI 是副产品、未到爆发点不推广、避免战略行为替代真实需求、从人出发改变商业模式等论述。
 
 ## I — 方法论骨架
