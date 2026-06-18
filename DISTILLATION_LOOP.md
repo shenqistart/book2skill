@@ -1,6 +1,6 @@
 # book2skill 持久蒸馏循环
 
-本文档记录本仓库后续批量蒸馏的固定循环。当前 goal 已建立，首个目标分类为 `01_经济学和大势`。
+本文档记录本仓库后续批量蒸馏的固定循环。当前 goal 已建立，本轮目标分类为 `08_团队建设`。
 
 ## 完成标准
 
@@ -12,7 +12,7 @@
 4. 每个 skill 都有 `test-prompts.json`，且包含 `should_trigger`、`should_not_trigger`、`edge_case` 三类测试。
 5. `candidates/`、`verified.md`、`rejected/` 保留审计轨迹。
 6. 本地确定性校验通过：`node scripts/validate-book2skill.js <skill-pack-dir>`。
-7. README 有入口，git 只提交本轮相关文件，随后推送到 `origin/main`。
+7. README 有入口，git 只提交本轮相关文件，随后推送到 `shenqistart/book2skill` 对应远端分支。
 
 ## 循环
 
@@ -56,6 +56,6 @@
 
 ## 当前队列
 
-- `01_经济学和大势`: 进行中。
-- 下一批主题: 待从产品主题目录读取后进入队列。
-
+- `01_经济学和大势`: 已有分类级 skill pack，可作为后续分类模板。
+- `08_团队建设`: 本轮执行中，目标是完成 7 本可用源文本、8 个分类级 skills、书籍关系 taxonomy、验证与推送。
+- 下一批主题: `08_团队建设` 审核通过后，从本地产品主题目录继续读取下一个未完成分类并重复本循环。

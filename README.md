@@ -81,6 +81,27 @@
 
 进入 skill pack：[01-economics-and-trends-skills](./01-economics-and-trends-skills/)
 
+### `08_团队建设` Skills（7 本 / 8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `08_团队建设` 分类，覆盖《穷查理宝典》《高效能人士的七个习惯》《金字塔原理》《创造时间》、两本 OKR 书和《奈飞文化手册》。
+
+**解决问题**：团队重大决策防错、信任协作、每日重点执行、结构化沟通、OKR 设计与运行、自由责任文化、人才密度和角色适配。
+
+**分类导航**：这些团队建设 skills 的书籍关系、组合方式和推荐调用边界见 [TEAM_BUILDING_SKILL_TAXONOMY.md](./TEAM_BUILDING_SKILL_TAXONOMY.md)。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这个团队决策会不会有盲区或失败路径？ | [`decision-checklist-lattice`](./08-team-building-skills/decision-checklist-lattice/SKILL.md) |
+| 团队互相甩锅、不信任，怎么转成行动？ | [`inside-out-trust-shift`](./08-team-building-skills/inside-out-trust-shift/SKILL.md) |
+| 大家很忙但重要事没人推进，今天该抓什么？ | [`daily-highlight-focus-loop`](./08-team-building-skills/daily-highlight-focus-loop/SKILL.md) |
+| 战略、复盘或 OKR 材料讲不清楚？ | [`pyramid-communication-logic`](./08-team-building-skills/pyramid-communication-logic/SKILL.md) |
+| OKR 像任务清单、KPI 或口号，怎么改？ | [`okr-quality-design`](./08-team-building-skills/okr-quality-design/SKILL.md) |
+| OKR 定了但缺少对齐、追踪和复盘？ | [`okr-alignment-review-cadence`](./08-team-building-skills/okr-alignment-review-cadence/SKILL.md) |
+| 流程太多，如何用自由、责任和坦诚替代控制？ | [`freedom-responsibility-culture`](./08-team-building-skills/freedom-responsibility-culture/SKILL.md) |
+| 团队能力、岗位和未来任务不匹配怎么办？ | [`talent-density-role-fit`](./08-team-building-skills/talent-density-role-fit/SKILL.md) |
+
+进入 skill pack：[08-team-building-skills](./08-team-building-skills/)
+
 ### 《微信背后的产品观》Skills（6 个核心模块）
 
 **来源**：张小龙《微信背后的产品观》。原书为 2021 年出版物，本仓库不收录原文全文，仅保留方法论蒸馏与来源说明。
