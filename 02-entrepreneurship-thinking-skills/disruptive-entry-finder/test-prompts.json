@@ -1,0 +1,51 @@
+{
+  "skill": "disruptive-entry-finder",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "企业软件大厂很强，我们能不能从被他们过度服务的小客户切进去？",
+      "expected_behavior": "应激活本 skill，判断低端破坏、客户任务和既有玩家动机缺口。",
+      "notes": "低端破坏场景。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "目标用户以前根本不用这类工具，我们想让他们第一次能完成这个任务。",
+      "expected_behavior": "应激活本 skill，判断新市场破坏和非消费入口。",
+      "notes": "新市场破坏场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "怎么用客户要完成的任务，而不是产品品类，重新找创业入口？",
+      "expected_behavior": "应激活本 skill，先定义客户任务，再找现有方案不足或过度服务。",
+      "notes": "JTBD 触发。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一条更有冲击力的发布会标语，突出颠覆行业。",
+      "expected_behavior": "不应激活本 skill，这是营销文案，不是破坏式入场判断。",
+      "notes": "诱饵：颠覆话术。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们已经决定目标用户和功能了，帮我排 sprint。",
+      "expected_behavior": "不应激活本 skill，这是执行排期。",
+      "notes": "诱饵：项目管理。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想做一个更便宜的产品，但不知道这是低端破坏还是单纯低价竞争。",
+      "expected_behavior": "应谨慎激活本 skill，检查客户是否被过度服务、成本结构是否不同、既有玩家是否缺少动机。",
+      "notes": "边界：低价不等于破坏式创新。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

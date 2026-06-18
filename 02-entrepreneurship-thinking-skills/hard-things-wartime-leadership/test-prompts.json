@@ -1,0 +1,51 @@
+{
+  "skill": "hard-things-wartime-leadership",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "公司现金只够 5 个月，要裁掉一部分团队还是继续赌融资？CEO 应该怎么处理？",
+      "expected_behavior": "应激活本 skill，确认危机事实、压缩优先级、设计艰难动作和沟通协议。",
+      "notes": "现金与裁员危机。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "目标没达成，大家都知道有问题但没人敢讲坏消息，我该怎么开会？",
+      "expected_behavior": "应激活本 skill，让坏消息穿透组织并建立事实导向沟通。",
+      "notes": "坏消息处理。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们必须从原业务转型，但团队士气很低，客户也在流失。",
+      "expected_behavior": "应激活本 skill，处理战时优先级、客户沟通和组织信任。",
+      "notes": "转型危机。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "公司平稳增长，帮我优化下季度 OKR。",
+      "expected_behavior": "不应激活本 skill，这更适合常态管理工具。",
+      "notes": "诱饵：平稳期 OKR。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一篇励志演讲鼓舞团队。",
+      "expected_behavior": "不应激活本 skill，除非有真实危机事实需要处理；单纯励志不适用。",
+      "notes": "诱饵：励志话术。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们可能要裁员，但涉及劳动合规和补偿细节。",
+      "expected_behavior": "可激活本 skill 处理事实和沟通框架，但必须明确法律和劳动合规需专业意见。",
+      "notes": "边界：法律专业问题。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

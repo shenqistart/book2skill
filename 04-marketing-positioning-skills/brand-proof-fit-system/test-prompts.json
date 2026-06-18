@@ -1,0 +1,51 @@
+{
+  "skill": "brand-proof-fit-system",
+  "version": "0.1.0",
+  "source_book": "《升级定位》 — 冯卫东",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的定位是高端健康零食，但配料、渠道和价格好像支撑不住，帮我检查。",
+      "expected_behavior": "应激活本 skill，用品牌三问和经营配称检查断点。",
+      "notes": "定位可信度审查。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们说自己是最专业的儿童运动品牌，用户凭什么相信？",
+      "expected_behavior": "应激活本 skill，区分差异声明和证据等级。",
+      "notes": "何以见得。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "品牌升级方案很漂亮，但我想知道业务动作是否能撑住这个定位。",
+      "expected_behavior": "应激活本 skill，检查产品、价格、渠道、服务和组织配称。",
+      "notes": "配称系统。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我还不知道品牌要占哪个心智位置，先帮我选方向。",
+      "expected_behavior": "不应优先激活本 skill，应先使用 mind-ladder-positioning。",
+      "notes": "诱饵：定位未定。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下这个商标能不能注册。",
+      "expected_behavior": "不应激活本 skill，需要商标和法律检索。",
+      "notes": "诱饵：法律问题。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想用权威专家背书来证明定位。",
+      "expected_behavior": "可用本 skill 检查证据是否支撑定位，同时转 influence-defense-screen 检查权威背书是否真实透明。",
+      "notes": "边界：证据与影响力伦理交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

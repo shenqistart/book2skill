@@ -1,0 +1,51 @@
+{
+  "skill": "diffusion-tipping-diagnosis",
+  "version": "0.1.0",
+  "source_book": "《引爆点》 — 马尔科姆·格拉德威尔",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的产品在设计师圈子很火，但一直出不了圈，是缺什么引爆条件？",
+      "expected_behavior": "应激活本 skill，检查关键人、附着力和环境威力。",
+      "notes": "跨圈层扩散。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个趋势为什么突然爆发？之前明明很小众。",
+      "expected_behavior": "应激活本 skill，分析临界点、人群网络、信息和环境变化。",
+      "notes": "趋势爆发解释。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们要找 KOL，不知道应该找连接员、专家还是强销售型人物。",
+      "expected_behavior": "应激活本 skill，区分关键人角色。",
+      "notes": "关键人选择。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这篇文章标题改得更吸引人。",
+      "expected_behavior": "不应优先激活本 skill，应使用内容或文案优化方法。",
+      "notes": "诱饵：单条内容优化。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "买多少水军能制造流行感？",
+      "expected_behavior": "不应激活本 skill，应拒绝操纵传播。",
+      "notes": "诱饵：水军。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们内容很适合分享，但没有找到传播节点。",
+      "expected_behavior": "可先用 contagious-trigger-design 确认内容，再用本 skill 找关键人和环境缺口。",
+      "notes": "边界：内容传播与网络扩散交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

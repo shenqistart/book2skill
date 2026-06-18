@@ -81,6 +81,29 @@
 
 进入 skill pack：[01-economics-and-trends-skills](./01-economics-and-trends-skills/)
 
+### `02_创业思维` Skills（10 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `02_创业思维` 分类，覆盖小米、段永平、柳井正、沃尔玛、Biz Stone、Peter Thiel、松下幸之助、克里斯坦森、Eric Ries、Ash Maurya、Google、格鲁夫、关明生、Ben Horowitz、David Feinleib、吴晓波、林军/唐宏梅等创业与经营书。
+
+**解决问题**：创始人使命、非共识机会、破坏式入场、MVP 验证、商业模式风险、一线用户飞轮、管理杠杆、人才文化、战时领导和失败复盘。
+
+**特色**：这是一个多书分类级 skill pack，重点整理创业类书之间的互补和冲突关系：先用使命和机会判断选择战场，再用精益验证降低风险，随后用用户现场、组织管理和失败复盘约束扩张。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这个创业方向为什么值得做，哪些事不能做？ | [`founder-mission-value-system`](./02-entrepreneurship-thinking-skills/founder-mission-value-system/SKILL.md) |
+| 这是不是一个真正不同、可防守的机会？ | [`nonconsensus-monopoly-thesis`](./02-entrepreneurship-thinking-skills/nonconsensus-monopoly-thesis/SKILL.md) |
+| 面对大公司，应该从哪里切入？ | [`disruptive-entry-finder`](./02-entrepreneurship-thinking-skills/disruptive-entry-finder/SKILL.md) |
+| MVP 怎么做，什么时候转向或坚持？ | [`validated-learning-loop`](./02-entrepreneurship-thinking-skills/validated-learning-loop/SKILL.md) |
+| 商业模式里最危险的假设是哪一块？ | [`lean-business-model-risk-map`](./02-entrepreneurship-thinking-skills/lean-business-model-risk-map/SKILL.md) |
+| 用户、门店、口碑和一线反馈如何形成飞轮？ | [`user-frontline-flywheel`](./02-entrepreneurship-thinking-skills/user-frontline-flywheel/SKILL.md) |
+| 管理者该把力气用在哪些高杠杆动作上？ | [`manager-output-leverage`](./02-entrepreneurship-thinking-skills/manager-output-leverage/SKILL.md) |
+| 怎么搭团队、文化和人才标准？ | [`talent-culture-operating-system`](./02-entrepreneurship-thinking-skills/talent-culture-operating-system/SKILL.md) |
+| 公司进入现金、裁员、转型等艰难局面怎么办？ | [`hard-things-wartime-leadership`](./02-entrepreneurship-thinking-skills/hard-things-wartime-leadership/SKILL.md) |
+| 失败到底由哪些链条造成，如何避免重演？ | [`failure-forensics-map`](./02-entrepreneurship-thinking-skills/failure-forensics-map/SKILL.md) |
+
+进入 skill pack：[02-entrepreneurship-thinking-skills](./02-entrepreneurship-thinking-skills/)
+
 ### 《微信背后的产品观》Skills（6 个核心模块）
 
 **来源**：张小龙《微信背后的产品观》。原书为 2021 年出版物，本仓库不收录原文全文，仅保留方法论蒸馏与来源说明。
@@ -122,6 +145,76 @@
 | 《启示录》 | [`inspired-product-management-skill`](./inspired-product-management-skill/) | 5 | 机会评估、产品原则、高保真测试、特约用户和敏捷产品化 |
 | 《用户体验要素》 | [`elements-of-user-experience-skill`](./elements-of-user-experience-skill/) | 6 | 五层 UX、战略、范围、结构、框架和表现层一致性 |
 | 《简约至上》 | [`simple-and-usable-skill`](./simple-and-usable-skill/) | 6 | 删除、组织、隐藏、转移、主流用户和简约愿景 |
+
+### `04_营销和定位` Skills（13 本 / 11 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `04_营销和定位` 分类，覆盖《定位》《21世纪的定位》《升级定位》《参与感》《超级符号就是超级创意》《如何让他买》《影响力》《疯传》《引爆点》《很久很久以前》《如何让品牌直击人心》《文化战略》《第四消费时代》。
+
+**解决问题**：品牌定位、品类入口、定位证据、经营配称、用户参与、口碑传播、超级符号、行为改变、影响力伦理、疯传、流行引爆、品牌原型和文化消费大势。
+
+**分类导航**：这些营销和定位 skills 的书籍关系、组合方式和推荐调用边界见 [MARKETING_POSITIONING_SKILL_TAXONOMY.md](./MARKETING_POSITIONING_SKILL_TAXONOMY.md)。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 品牌到底该在顾客心智中代表什么？ | [`mind-ladder-positioning`](./04-marketing-positioning-skills/mind-ladder-positioning/SKILL.md) |
+| 旧赛道太卷，能不能创建新品类？ | [`category-entry-design`](./04-marketing-positioning-skills/category-entry-design/SKILL.md) |
+| 定位是否可信，业务动作能不能撑住？ | [`brand-proof-fit-system`](./04-marketing-positioning-skills/brand-proof-fit-system/SKILL.md) |
+| 怎么让用户参与、共创并形成自然口碑？ | [`participation-word-of-mouth-loop`](./04-marketing-positioning-skills/participation-word-of-mouth-loop/SKILL.md) |
+| 品牌符号、logo、包装怎样更容易被记住？ | [`super-symbol-memory-anchor`](./04-marketing-positioning-skills/super-symbol-memory-anchor/SKILL.md) |
+| 用户有兴趣但不购买、不试用、不推荐，卡在哪里？ | [`behavior-change-lever-stack`](./04-marketing-positioning-skills/behavior-change-lever-stack/SKILL.md) |
+| 限时、权威、评价、稀缺等转化设计会不会操纵用户？ | [`influence-defense-screen`](./04-marketing-positioning-skills/influence-defense-screen/SKILL.md) |
+| 内容、活动或功能为什么没人愿意转发？ | [`contagious-trigger-design`](./04-marketing-positioning-skills/contagious-trigger-design/SKILL.md) |
+| 一个趋势或产品有没有跨圈层引爆条件？ | [`diffusion-tipping-diagnosis`](./04-marketing-positioning-skills/diffusion-tipping-diagnosis/SKILL.md) |
+| 品牌人格、故事和原型意义怎么统一？ | [`archetype-meaning-system`](./04-marketing-positioning-skills/archetype-meaning-system/SKILL.md) |
+| 品牌是否符合文化变化和消费时代大势？ | [`cultural-era-opportunity-map`](./04-marketing-positioning-skills/cultural-era-opportunity-map/SKILL.md) |
+
+进入 skill pack：[04-marketing-positioning-skills](./04-marketing-positioning-skills/)
+
+### `05_增长和流量` Skills（9 本 / 10 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `05_增长和流量` 分类，覆盖《回头客战略》《增长黑客》《硅谷增长黑客实战笔记》《精益数据分析》《拉新》《关系飞轮》《小群效应》《直播电商的逻辑》《流媒体时代》。
+
+**解决问题**：流量成本、复购口碑、增长门禁、北极星与 OMTM、增长实验、获客渠道、私域关系、小群社群、直播电商和平台分发权力。
+
+**分类导航**：这些增长和流量 skills 的书籍关系、组合方式和推荐调用边界见 [GROWTH_TRAFFIC_SKILL_TAXONOMY.md](./GROWTH_TRAFFIC_SKILL_TAXONOMY.md)。
+
+**来源边界**：64 号书本地未发现对应源文本，已记录于 [source-quality-reports/05-growth-traffic-source-gate.md](./source-quality-reports/05-growth-traffic-source-gate.md)，未强行蒸馏。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 流量越来越贵，怎么靠体验、复购和口碑降低获客压力？ | [`repeat-customer-experience-loop`](./05-growth-and-traffic-skills/repeat-customer-experience-loop/SKILL.md) |
+| 产品还没起量，能不能开始大规模增长？ | [`growth-readiness-aha-gate`](./05-growth-and-traffic-skills/growth-readiness-aha-gate/SKILL.md) |
+| 增长团队怎么跑实验并沉淀学习？ | [`growth-experiment-operating-system`](./05-growth-and-traffic-skills/growth-experiment-operating-system/SKILL.md) |
+| 北极星指标怎么定，增长模型怎么拆？ | [`north-star-growth-model`](./05-growth-and-traffic-skills/north-star-growth-model/SKILL.md) |
+| 数据很多但不知道当前阶段看哪个？ | [`omtm-lean-analytics-focus`](./05-growth-and-traffic-skills/omtm-lean-analytics-focus/SKILL.md) |
+| 该选哪个获客渠道，怎么低成本测试？ | [`bullseye-channel-selection`](./05-growth-and-traffic-skills/bullseye-channel-selection/SKILL.md) |
+| 私域、超级用户和复购怎么形成关系飞轮？ | [`relationship-flywheel-private-domain`](./05-growth-and-traffic-skills/relationship-flywheel-private-domain/SKILL.md) |
+| 社群沉默，大群低转化，怎么用小群增长？ | [`small-group-community-leverage`](./05-growth-and-traffic-skills/small-group-community-leverage/SKILL.md) |
+| 这个品类适不适合直播电商？ | [`live-commerce-fit-map`](./05-growth-and-traffic-skills/live-commerce-fit-map/SKILL.md) |
+| 平台规则、分发权力或内容渠道变化时怎么办？ | [`platform-power-shift-strategy`](./05-growth-and-traffic-skills/platform-power-shift-strategy/SKILL.md) |
+
+进入 skill pack：[05-growth-and-traffic-skills](./05-growth-and-traffic-skills/)
+
+### `06_财务金融和法律` Skills（8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `06_财务金融和法律` 分类，覆盖《创业投资法律手册》《公司金融》《金融经济学二十五讲》《应用公司理财》等书；《什么是金融》本地 OCR 未通过 quote-level Source Gate，暂只作为书目背景记录。
+
+**解决问题**：公司财务问题分流、资本预算、风险收益、资本结构、估值假设、现金分配、金融模型边界和创业法律资本风险。
+
+**分类导航**：这些 finance/law skills 的调用顺序、替代与互补关系见 [FINANCE_LAW_SKILL_TAXONOMY.md](./FINANCE_LAW_SKILL_TAXONOMY.md)。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这是投资、融资、估值、分红还是法律问题？ | [`finance-question-router`](./06-finance-law-skills/finance-question-router/SKILL.md) |
+| 一个项目、设备、并购或产品线值不值得做？ | [`capital-budgeting-npv-discipline`](./06-finance-law-skills/capital-budgeting-npv-discipline/SKILL.md) |
+| 折现率、资本成本、风险溢价或 beta 怎么处理？ | [`risk-return-hurdle-rate`](./06-finance-law-skills/risk-return-hurdle-rate/SKILL.md) |
+| WACC 是否适用，什么时候要用 APV？ | [`capital-structure-apv-check`](./06-finance-law-skills/capital-structure-apv-check/SKILL.md) |
+| DCF、倍数、融资估值或并购报价靠谱吗？ | [`valuation-assumption-triangulator`](./06-finance-law-skills/valuation-assumption-triangulator/SKILL.md) |
+| 要不要分红、回购或留存现金？ | [`cash-distribution-policy`](./06-finance-law-skills/cash-distribution-policy/SKILL.md) |
+| CAPM、无套利或有效市场模型为什么解释不了现实？ | [`financial-economics-friction-test`](./06-finance-law-skills/financial-economics-friction-test/SKILL.md) |
+| 创始人股权、章程、IP、投资协议有什么法律风险？ | [`startup-legal-capital-map`](./06-finance-law-skills/startup-legal-capital-map/SKILL.md) |
+
+进入 skill pack：[06-finance-law-skills](./06-finance-law-skills/)
 
 ---
 

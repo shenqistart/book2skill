@@ -1,0 +1,51 @@
+{
+  "skill": "cultural-era-opportunity-map",
+  "version": "0.1.0",
+  "source_book": "《文化战略》《第四消费时代》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们做地方生活方式品牌，想判断共享、社区和地方认同是不是一个长期机会。",
+      "expected_behavior": "应激活本 skill，分析文化正统、社会矛盾、亚文化实践和消费时代。",
+      "notes": "文化和消费时代机会。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个品类大家都在说健康天然，我们能不能找到更有文化突破的表达？",
+      "expected_behavior": "应激活本 skill，寻找旧文化正统失灵和意识形态机遇。",
+      "notes": "文化战略。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "消费降级下，品牌还要不要强调高级感和拥有感？",
+      "expected_behavior": "应激活本 skill，判断目标用户的消费阶段和意义需求。",
+      "notes": "消费时代变化。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天小红书哪个话题会爆？",
+      "expected_behavior": "不应激活本 skill，这是实时趋势预测，需要当前平台数据。",
+      "notes": "诱饵：实时预测。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我蹭一个环保热点，产品本身不用改。",
+      "expected_behavior": "不应激活本 skill 输出包装方案，应指出文化主张缺少承载。",
+      "notes": "诱饵：蹭热点。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "一个高端品牌想转向朴素、共享和地方文化，会不会伤害原有用户？",
+      "expected_behavior": "可用本 skill 分析消费时代张力，并要求结合定位、用户分层和产品配称。",
+      "notes": "边界：文化转向与原定位冲突。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

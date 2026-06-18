@@ -1,0 +1,51 @@
+{
+  "skill": "talent-culture-operating-system",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "团队从 10 人到 50 人后，文化变成口号，招聘标准也越来越低，怎么办？",
+      "expected_behavior": "应激活本 skill，把文化改写为招聘、评价、授权和信息流机制。",
+      "notes": "扩张后的文化系统。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们想招更自驱的人，应该怎么定义人才标准和试用期判断？",
+      "expected_behavior": "应激活本 skill，设计能力、责任心、学习速度、价值观和阶段适配标准。",
+      "notes": "人才标准。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "所有关键决策都回到创始人身上，怎么培养能独立负责的经营者？",
+      "expected_behavior": "应激活本 skill，设计责任下放、资源授权和经营者培养机制。",
+      "notes": "经营者培养。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我安排一次团建活动。",
+      "expected_behavior": "不应激活本 skill，这是活动安排，不是人才文化操作系统。",
+      "notes": "诱饵：团建。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "把 Google 的管理制度完整照搬到我们公司可以吗？",
+      "expected_behavior": "不应直接激活为照搬方案；应说明不能复制制度，只能抽象原则并适配。",
+      "notes": "诱饵：制度复制。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们价值观很清楚，但会议和指标很乱，是文化问题还是管理节奏问题？",
+      "expected_behavior": "可先用本 skill 判断文化是否有机制承接，再转 manager-output-leverage 设计节奏。",
+      "notes": "边界：文化与管理节奏交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
