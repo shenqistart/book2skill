@@ -1,0 +1,51 @@
+{
+  "skill": "omtm-lean-analytics-focus",
+  "version": "0.1.0",
+  "source_book": "《精益数据分析》 — 阿利斯泰尔·克罗尔、本杰明·尤科维奇",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们有访问、注册、下单、留存、分享一堆数据，现在最该盯哪个？",
+      "expected_behavior": "应激活本 skill，按阶段和商业模式选出 OMTM，并定义阈值和行动。",
+      "notes": "指标过多。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "月活上涨很好看，但收入和留存没变，这是不是虚荣指标？",
+      "expected_behavior": "应激活本 skill，区分虚荣指标和可行动指标，并要求分群或同期群验证。",
+      "notes": "虚荣指标。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "早期 SaaS 产品当前阶段应该用哪个唯一关键指标推动实验？",
+      "expected_behavior": "应激活本 skill，先判断阶段和 SaaS 模型，再选择当前唯一关键指标。",
+      "notes": "OMTM 选择。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这些数据做成一页漂亮的 BI 大屏。",
+      "expected_behavior": "不应激活本 skill；这是展示设计任务，不是指标决策。",
+      "notes": "诱饵：报表美化。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我预测这家上市公司的下季度利润。",
+      "expected_behavior": "不应激活本 skill；这是财务预测或投资分析，不是精益数据聚焦。",
+      "notes": "诱饵：证券预测。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "北极星指标和 OMTM 冲突时怎么办？",
+      "expected_behavior": "应激活本 skill，说明北极星是长期方向，OMTM 是当前瓶颈，并用护栏指标防止局部优化。",
+      "notes": "边界：北极星与 OMTM。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
