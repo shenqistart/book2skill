@@ -1,0 +1,51 @@
+{
+  "skill": "cash-distribution-policy",
+  "version": "0.1.0",
+  "source_book": "《应用公司理财》；《公司金融 原书第12版 基础篇》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "公司账上现金很多，但增长机会变少了，应该分红、回购还是继续留存？",
+      "expected_behavior": "应激活本 skill，先检查好项目和自由现金流，再比较返还方式。",
+      "notes": "现金返还。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "董事会想回购股票，但我担心只是为了短期股价，怎么判断资本纪律？",
+      "expected_behavior": "应激活本 skill，检查项目机会、估值、自由现金流和约束。",
+      "notes": "回购判断。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "成熟业务自由现金流很稳定，是否应该提高股东回报？",
+      "expected_behavior": "应激活本 skill，比较资本成本、项目回报和返还政策。",
+      "notes": "成熟业务。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "请帮我设计最省税的分红结构。",
+      "expected_behavior": "不应激活本 skill 给税务筹划结论；应提示专业税务意见。",
+      "notes": "诱饵：税务建议。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个项目 NPV 是多少？暂时不涉及现金返还。",
+      "expected_behavior": "不应优先激活本 skill；应调用 capital-budgeting-npv-discipline。",
+      "notes": "诱饵：项目 NPV。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "公司有现金但融资环境变差，是否还应该分红？",
+      "expected_behavior": "可激活本 skill，但应把融资环境、生存储备和未来项目作为约束。",
+      "notes": "边界：融资环境。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

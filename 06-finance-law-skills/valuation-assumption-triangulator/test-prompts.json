@@ -1,0 +1,51 @@
+{
+  "skill": "valuation-assumption-triangulator",
+  "version": "0.1.0",
+  "source_book": "《应用公司理财》；《公司金融 原书第12版 基础篇》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这个融资 BP 用 5 年 10 倍收入增长支撑估值，帮我审查 DCF 假设是否一致。",
+      "expected_behavior": "应激活本 skill，检查现金流、增长、再投资、风险和估值口径一致性。",
+      "notes": "估值假设审计。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "投资人给了 15 倍收入估值，我想知道这个倍数和同业是否可比。",
+      "expected_behavior": "应激活本 skill，比较可比公司、倍数口径、增长、利润率和风险。",
+      "notes": "相对估值。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "并购报价看起来很高，但现金流和协同假设不清楚，怎么审计？",
+      "expected_behavior": "应激活本 skill，拆估值对象、现金流口径和脆弱假设。",
+      "notes": "并购估值。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这只股票明天可以买入吗？给我一个目标价。",
+      "expected_behavior": "不应激活本 skill 输出买卖建议或目标价；应说明边界。",
+      "notes": "诱饵：证券建议。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我没有任何现金流、增长或风险数据，但想要一个精确估值。",
+      "expected_behavior": "不应直接估值；应要求补充输入并说明无法下结论。",
+      "notes": "诱饵：数据缺失。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "创业公司收入很少但增长快，DCF 和倍数都很不稳定，还能审计估值吗？",
+      "expected_behavior": "可激活本 skill，但应把输出限定为假设审计和情景分析，不给精确价格。",
+      "notes": "边界：早期公司。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

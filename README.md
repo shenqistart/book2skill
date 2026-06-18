@@ -195,6 +195,27 @@
 
 进入 skill pack：[05-growth-and-traffic-skills](./05-growth-and-traffic-skills/)
 
+### `06_财务金融和法律` Skills（8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `06_财务金融和法律` 分类，覆盖《创业投资法律手册》《公司金融》《金融经济学二十五讲》《应用公司理财》等书；《什么是金融》本地 OCR 未通过 quote-level Source Gate，暂只作为书目背景记录。
+
+**解决问题**：公司财务问题分流、资本预算、风险收益、资本结构、估值假设、现金分配、金融模型边界和创业法律资本风险。
+
+**分类导航**：这些 finance/law skills 的调用顺序、替代与互补关系见 [FINANCE_LAW_SKILL_TAXONOMY.md](./FINANCE_LAW_SKILL_TAXONOMY.md)。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这是投资、融资、估值、分红还是法律问题？ | [`finance-question-router`](./06-finance-law-skills/finance-question-router/SKILL.md) |
+| 一个项目、设备、并购或产品线值不值得做？ | [`capital-budgeting-npv-discipline`](./06-finance-law-skills/capital-budgeting-npv-discipline/SKILL.md) |
+| 折现率、资本成本、风险溢价或 beta 怎么处理？ | [`risk-return-hurdle-rate`](./06-finance-law-skills/risk-return-hurdle-rate/SKILL.md) |
+| WACC 是否适用，什么时候要用 APV？ | [`capital-structure-apv-check`](./06-finance-law-skills/capital-structure-apv-check/SKILL.md) |
+| DCF、倍数、融资估值或并购报价靠谱吗？ | [`valuation-assumption-triangulator`](./06-finance-law-skills/valuation-assumption-triangulator/SKILL.md) |
+| 要不要分红、回购或留存现金？ | [`cash-distribution-policy`](./06-finance-law-skills/cash-distribution-policy/SKILL.md) |
+| CAPM、无套利或有效市场模型为什么解释不了现实？ | [`financial-economics-friction-test`](./06-finance-law-skills/financial-economics-friction-test/SKILL.md) |
+| 创始人股权、章程、IP、投资协议有什么法律风险？ | [`startup-legal-capital-map`](./06-finance-law-skills/startup-legal-capital-map/SKILL.md) |
+
+进入 skill pack：[06-finance-law-skills](./06-finance-law-skills/)
+
 ---
 
 ## 仓库目录规范
