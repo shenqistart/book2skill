@@ -1,0 +1,52 @@
+{
+  "skill": "creative-destruction-vitality",
+  "version": "0.1.0",
+  "source_book": "《繁荣与衰退》 — 艾伦·格林斯潘、阿德里安·伍尔德里奇；《激荡三十年》 — 吴晓波",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "一个城市创业公司很多，怎么判断是真有经济活力还是只是融资热？",
+      "expected_behavior": "应激活本 skill，检查生产率来源、进入退出、资本配置和破坏成本。",
+      "notes": "活力诊断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "平台经济被监管后，会不会削弱创新活力？应该怎么看？",
+      "expected_behavior": "应激活本 skill，分析垄断、进入、监管负担、创新和社会承受力。",
+      "notes": "监管与活力。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "一个行业技术替代很快，但大量旧岗位消失，这算好事吗？",
+      "expected_behavior": "应激活本 skill，同时评估生产率提升和破坏成本。",
+      "notes": "创造与破坏。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "明天这个行业指数会涨吗？",
+      "expected_behavior": "不应激活本 skill，也不应做短期交易预测。",
+      "notes": "诱饵：短期预测。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "给我写一段歌颂颠覆式创新的宣传文案。",
+      "expected_behavior": "不应激活本 skill，本 skill 不无条件歌颂破坏。",
+      "notes": "诱饵：宣传文案。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "政府扶持一个新兴产业，长期看会不会带来生产率提升？",
+      "expected_behavior": "可调用本 skill 看生产率和活力，但应结合 industrial-policy-discipline 检查政策纪律。",
+      "notes": "边界：产业政策与长期活力。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

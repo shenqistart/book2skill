@@ -1,0 +1,52 @@
+{
+  "skill": "financial-crisis-forensics",
+  "version": "0.1.0",
+  "source_book": "《当音乐停止之后》 — 艾伦·布林德；《21世纪货币政策》 — 本·伯南克",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这次地产链条风险会不会演变成系统性金融危机？应该检查哪些环节？",
+      "expected_behavior": "应激活本 skill，检查泡沫、杠杆、期限错配、金融机构敞口、政策响应和传播链。",
+      "notes": "危机风险诊断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "为什么说雷曼不是 2008 危机的唯一原因？",
+      "expected_behavior": "应激活本 skill，区分脆弱性、触发事件和传播节点。",
+      "notes": "危机复盘。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "影子银行为什么会出现类似银行挤兑的风险？",
+      "expected_behavior": "应激活本 skill，分析短债长投、赎回压力、担保和信心传染。",
+      "notes": "影子银行传导。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "某只股票今天跌了 5%，是不是可以买入？",
+      "expected_behavior": "不应激活本 skill，也不应给交易建议。",
+      "notes": "诱饵：单资产交易。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我总结一下《当音乐停止之后》的章节目录。",
+      "expected_behavior": "不应激活本 skill，这是摘要/目录请求，不是危机法医复盘。",
+      "notes": "诱饵：摘要。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "银行短期流动性紧张，央行应该降息还是提供流动性？",
+      "expected_behavior": "应先判断是否危机链条；可调用本 skill，并结合 monetary-regime-map 区分工具。",
+      "notes": "边界：危机诊断与央行工具。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

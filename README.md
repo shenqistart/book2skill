@@ -60,6 +60,27 @@
 
 进入 skill pack：[chajing-skill](./chajing-skill/)
 
+### `01_经济学和大势` Skills（8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `01_经济学和大势` 分类，覆盖曼昆、徐高、黄奇帆、沃尔克/行天丰雄、伯南克、布林德、格林斯潘/伍尔德里奇、Joe Studwell、吴晓波等书。
+
+**解决问题**：基础经济学取舍、市场政策归宿、中国宏观约束、货币制度、金融危机复盘、产业政策纪律、中国改革路径、长期经济活力判断。
+
+**特色**：这是一个多书分类级 skill pack，不替代单书阅读；重点整理书之间关系，帮助 agent 按问题选择合适的经济学和大势分析框架。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这个选择、政策或资源投入值不值？ | [`scarcity-incentive-lens`](./01-economics-and-trends-skills/scarcity-incentive-lens/SKILL.md) |
+| 限价、税、补贴、抽佣最后影响谁？ | [`market-policy-incidence`](./01-economics-and-trends-skills/market-policy-incidence/SKILL.md) |
+| 中国宏观问题该先看哪些约束？ | [`macro-constraint-map`](./01-economics-and-trends-skills/macro-constraint-map/SKILL.md) |
+| 央行、通胀、QE、汇率制度如何理解？ | [`monetary-regime-map`](./01-economics-and-trends-skills/monetary-regime-map/SKILL.md) |
+| 泡沫、杠杆、监管会不会形成危机链条？ | [`financial-crisis-forensics`](./01-economics-and-trends-skills/financial-crisis-forensics/SKILL.md) |
+| 产业政策是不是有真实纪律和退出机制？ | [`industrial-policy-discipline`](./01-economics-and-trends-skills/industrial-policy-discipline/SKILL.md) |
+| 中国政策或企业变化处在哪条改革路径上？ | [`china-reform-path`](./01-economics-and-trends-skills/china-reform-path/SKILL.md) |
+| 一个行业或经济体是真有长期活力吗？ | [`creative-destruction-vitality`](./01-economics-and-trends-skills/creative-destruction-vitality/SKILL.md) |
+
+进入 skill pack：[01-economics-and-trends-skills](./01-economics-and-trends-skills/)
+
 ### 《微信背后的产品观》Skills（6 个核心模块）
 
 **来源**：张小龙《微信背后的产品观》。原书为 2021 年出版物，本仓库不收录原文全文，仅保留方法论蒸馏与来源说明。

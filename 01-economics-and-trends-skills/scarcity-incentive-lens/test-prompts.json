@@ -1,0 +1,52 @@
+{
+  "skill": "scarcity-incentive-lens",
+  "version": "0.1.0",
+  "source_book": "《经济学原理》 — N. 格里高利·曼昆",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们已经投入了两个月做这个功能，但用户反馈一般，要不要继续做下去？",
+      "expected_behavior": "应激活本 skill，忽略沉没成本，比较继续投入的机会成本、边际收益和替代方案。",
+      "notes": "典型增量决策。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "如果提高销售提成，团队行为可能会怎么变？",
+      "expected_behavior": "应激活本 skill，分析激励改变后的直接和间接行为反应。",
+      "notes": "激励场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我只看到这个项目现金成本很低，但它会占用核心团队时间，怎么判断值不值？",
+      "expected_behavior": "应激活本 skill，把团队时间和被放弃机会纳入机会成本。",
+      "notes": "显性成本不足。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下 2025 年美国 CPI 年度数据。",
+      "expected_behavior": "不应激活本 skill，这是实时/历史数据查询。",
+      "notes": "诱饵：信息查询。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "解释一下布雷顿森林体系的历史。",
+      "expected_behavior": "不应激活本 skill，应使用货币制度相关 skill 或普通解释。",
+      "notes": "诱饵：货币史。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们要不要降低平台抽佣来提升交易量？",
+      "expected_behavior": "可以先用本 skill 澄清取舍和激励，再转 market-policy-incidence 做弹性和归宿分析。",
+      "notes": "边界：基础激励与市场政策交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+
