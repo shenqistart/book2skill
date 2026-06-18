@@ -1,0 +1,51 @@
+{
+  "skill": "surprise-fatigue-reset",
+  "version": "0.1.0",
+  "source_book": "《任天堂的体验设计》 — 玉树真一郎",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "用户开始无聊怎么办？",
+      "expected_behavior": "应激活 surprise-fatigue-reset，按步骤输出诊断。",
+      "notes": "正面触发。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "流程太平了怎么增加记忆点？",
+      "expected_behavior": "应激活 surprise-fatigue-reset，识别核心问题并给出执行步骤。",
+      "notes": "同类表达。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "什么时候该制造惊喜？",
+      "expected_behavior": "应激活 surprise-fatigue-reset，但同时提示边界。",
+      "notes": "边界内正面场景。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这段文字翻译成英文。",
+      "expected_behavior": "不应激活本 skill，这是纯语言处理。",
+      "notes": "诱饵: 非产品方法论场景。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下这本书作者的最新消息。",
+      "expected_behavior": "不应激活本 skill，应进行信息查询。",
+      "notes": "诱饵: 外部事实查询。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们有个产品问题，但现在只有一个用户反馈，可以下结论吗？",
+      "expected_behavior": "应谨慎处理，若调用也必须标注证据不足和下一步验证。",
+      "notes": "边界: 证据不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
