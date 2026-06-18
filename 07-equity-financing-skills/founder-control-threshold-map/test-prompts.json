@@ -1,0 +1,51 @@
+{
+  "skill": "founder-control-threshold-map",
+  "version": "0.1.0",
+  "source_book": "《一本书看透股权架构》 — 李利威",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "三个创始人准备按 55%、30%、15% 分股，重大事项到底谁能说了算？",
+      "expected_behavior": "应激活本 skill，按股权比例、重大事项阈值、章程约定和董事会安排输出通过权与阻断权地图。",
+      "notes": "典型创始人分股控制权判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "融资后我从 70% 稀释到 48%，是不是就失去公司控制权了？",
+      "expected_behavior": "应激活本 skill，区分普通事项、重大事项、董事会和特别表决安排，避免只看单一比例。",
+      "notes": "稀释后的控制权重算。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "投资人拿 22%，还要一个董事席位和重大事项 veto，这会影响我们哪些权力？",
+      "expected_behavior": "应激活本 skill，结合股权、董事会和否决事项列出投资人可阻断范围。",
+      "notes": "股权与治理权交叉。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一份完整的公司章程法律文本。",
+      "expected_behavior": "不应激活本 skill 直接起草法律文件，应提示需要专业律师并只可提供结构性问题清单。",
+      "notes": "诱饵：法律文本代写。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "A 轮投资前估值 8000 万，投 2000 万后我会被稀释多少？",
+      "expected_behavior": "不应优先激活本 skill，应转 valuation-dilution-clarifier 计算估值和稀释。",
+      "notes": "诱饵：估值稀释计算。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想给核心员工 12% 期权，但又担心影响创始人控制权。",
+      "expected_behavior": "可以先用本 skill 看稀释后的权力边界，再转 control-without-ownership-design 设计持股平台或表决安排。",
+      "notes": "边界：员工激励与控制权设计交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
