@@ -79,6 +79,27 @@
 
 进入 skill pack：[wechat-product-philosophy-skill](./wechat-product-philosophy-skill/)
 
+### 03 如何做产品专题 Skills（10 本 / 53 个核心模块）
+
+**来源**：本地 `03_如何做产品` 主题文件夹。源文本完整性记录见 [source-quality-reports/03-product-books-source-gate.md](./source-quality-reports/03-product-books-source-gate.md)，执行循环见 [PRODUCT_BOOKS_GOAL.md](./PRODUCT_BOOKS_GOAL.md)。
+
+**解决问题**：产品定位、真需求判断、用户模型、行为习惯、体验结构、产品管理、品牌社区、零售体验、简约设计和创业产品化。
+
+**专题边界**：44《用户体验度量》本地转写残缺，未强行蒸馏；其余 10 本均保留 candidates、verified、rejected、QUALITY_REVIEW 和测试 prompts。
+
+| 书 | Skill Pack | Skills | 适合问题 |
+|---|---|---:|---|
+| 《微信背后的产品观》 | [`wechat-product-philosophy-skill`](./wechat-product-philosophy-skill/) | 6 | 人性洞察、场景边界、产品结构、自然增长和产品气质 |
+| 《真需求》 | [`true-demand-skill`](./true-demand-skill/) | 5 | 真需求、价值组合、共识缺口、场景匹配和商业可行性 |
+| 《俞军产品方法论》 | [`yu-jun-product-methodology-skill`](./yu-jun-product-methodology-skill/) | 5 | 用户模型、用户价值公式、效用成本、交易模型和决策偏差 |
+| 《鞋狗》 | [`shoe-dog-product-building-skill`](./shoe-dog-product-building-skill/) | 5 | 一线验证、运动员反馈、品牌运动、现金流纪律和供应风险 |
+| 《Little Black Stretchy Pants》 | [`little-black-stretchy-pants-skill`](./little-black-stretchy-pants-skill/) | 5 | 社区扩张、垂直零售、教育型门店、质量召回和文化系统 |
+| 《上瘾》 | [`hooked-habit-product-skill`](./hooked-habit-product-skill/) | 6 | 触发、行动、奖励、投入、习惯区和操纵伦理 |
+| 《任天堂的体验设计》 | [`nintendo-experience-design-skill`](./nintendo-experience-design-skill/) | 4 | 直觉体验、惊喜与疲劳、故事成长和体验方法选择 |
+| 《启示录》 | [`inspired-product-management-skill`](./inspired-product-management-skill/) | 5 | 机会评估、产品原则、高保真测试、特约用户和敏捷产品化 |
+| 《用户体验要素》 | [`elements-of-user-experience-skill`](./elements-of-user-experience-skill/) | 6 | 五层 UX、战略、范围、结构、框架和表现层一致性 |
+| 《简约至上》 | [`simple-and-usable-skill`](./simple-and-usable-skill/) | 6 | 删除、组织、隐藏、转移、主流用户和简约愿景 |
+
 ---
 
 ## 仓库目录规范
