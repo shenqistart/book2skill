@@ -81,6 +81,27 @@
 
 进入 skill pack：[01-economics-and-trends-skills](./01-economics-and-trends-skills/)
 
+### `07_股权分配和融资` Skills（7 本 / 8 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `07_股权分配和融资` 分类，覆盖《穿越寒冬》《超级天使投资》《风险投资交易》《创业之初你不可不知的融资知识》《给你一个亿你能干什么》《一本书看透股权架构》《股权战争》。
+
+**解决问题**：创始人分股、控制权阈值、钱权分离、融资准备、投资人匹配、估值稀释、Term Sheet 审计、天使投资组合纪律和股权冲突预演。
+
+**特色**：这是一个多书分类级 skill pack，重点整理书之间关系，帮助 agent 在“内部分股 → 外部融资 → 条款审计 → 冲突预演”链路中选择合适 skill。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 三个创始人怎么分股才不僵局？ | [`founder-control-threshold-map`](./07-equity-financing-skills/founder-control-threshold-map/SKILL.md) |
+| 要给员工股权但不想治理失控 | [`control-without-ownership-design`](./07-equity-financing-skills/control-without-ownership-design/SKILL.md) |
+| 公司快没钱了，现在该不该融资？ | [`financing-readiness-runway`](./07-equity-financing-skills/financing-readiness-runway/SKILL.md) |
+| 有多个投资人，不知道选谁 | [`investor-fit-signal-filter`](./07-equity-financing-skills/investor-fit-signal-filter/SKILL.md) |
+| 投资人说估值很高，但我看不懂稀释 | [`valuation-dilution-clarifier`](./07-equity-financing-skills/valuation-dilution-clarifier/SKILL.md) |
+| 收到 Term Sheet，想知道哪些条款危险 | [`term-sheet-economics-control-audit`](./07-equity-financing-skills/term-sheet-economics-control-audit/SKILL.md) |
+| 我想做天使投资 | [`angel-portfolio-discipline`](./07-equity-financing-skills/angel-portfolio-discipline/SKILL.md) |
+| 担心未来股东翻脸或控制权争夺 | [`equity-conflict-pre-mortem`](./07-equity-financing-skills/equity-conflict-pre-mortem/SKILL.md) |
+
+进入 skill pack：[07-equity-financing-skills](./07-equity-financing-skills/)
+
 ### `08_团队建设` Skills（7 本 / 8 个分类级模块）
 
 **来源**：行者创业系统读书产品中 `08_团队建设` 分类，覆盖《穷查理宝典》《高效能人士的七个习惯》《金字塔原理》《创造时间》、两本 OKR 书和《奈飞文化手册》。
