@@ -85,6 +85,8 @@
 
 **解决问题**：产品定位、真需求判断、用户模型、行为习惯、体验结构、产品管理、品牌社区、零售体验、简约设计和创业产品化。
 
+**分类导航**：这些产品类 skills 的差异、互补关系和推荐调用顺序见 [PRODUCT_SKILL_TAXONOMY.md](./PRODUCT_SKILL_TAXONOMY.md)。
+
 **专题边界**：44《用户体验度量》本地转写残缺，未强行蒸馏；其余 10 本均保留 candidates、verified、rejected、QUALITY_REVIEW 和测试 prompts。
 
 | 书 | Skill Pack | Skills | 适合问题 |
