@@ -1,0 +1,52 @@
+{
+  "skill": "industrial-policy-discipline",
+  "version": "0.1.0",
+  "source_book": "《亚洲大趋势》 — Joe Studwell；《战略与路径》 — 黄奇帆",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "一个地方给新能源企业大量补贴，怎么判断这是不是有效产业政策？",
+      "expected_behavior": "应激活本 skill，检查外部纪律、技术学习、金融配置和退出机制。",
+      "notes": "产业补贴诊断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "为什么有些东亚经济体制造业升级成功，有些陷入低效率投资？",
+      "expected_behavior": "应激活本 skill，比较农业基础、制造业、金融管制和出口纪律。",
+      "notes": "东亚发展比较。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "产业链集群不只是招商项目，那应该看哪些纪律指标？",
+      "expected_behavior": "应激活本 skill，检查集群协同、订单、出口、技术升级和失败退出。",
+      "notes": "产业集群。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一份企业申请政府补贴的宣传材料。",
+      "expected_behavior": "不应激活本 skill，本 skill 不为特定企业争取补贴背书。",
+      "notes": "诱饵：补贴申请。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个项目是否值得继续投入两个月研发？",
+      "expected_behavior": "不应优先激活本 skill，应使用 scarcity-incentive-lens。",
+      "notes": "诱饵：普通取舍。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "政府采购支持国产软件，是产业纪律还是保护落后？",
+      "expected_behavior": "应调用本 skill，但要要求补充绩效指标、竞争机制和退出条件。",
+      "notes": "边界：保护与纪律。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+
