@@ -1,0 +1,51 @@
+{
+  "skill": "validated-learning-loop",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们要做 MVP，但不知道第一版应该验证什么，怎么设计？",
+      "expected_behavior": "应激活本 skill，先列关键假设，选择最危险假设，再设计 MVP 和指标。",
+      "notes": "典型 MVP 设计。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "用户访谈都说喜欢，但没人付费，我们该继续还是转向？",
+      "expected_behavior": "应激活本 skill，区分表达和行为，设定判停条件并判断是否转向。",
+      "notes": "行为指标与 pivot。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们下载量上涨，但留存很差，这算有效学习吗？",
+      "expected_behavior": "应激活本 skill，识别虚荣指标，要求可行动指标和下一轮实验。",
+      "notes": "虚荣指标诱发。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "这个已经确认的功能帮我写技术方案。",
+      "expected_behavior": "不应激活本 skill，这是常规工程执行，不是创业假设验证。",
+      "notes": "诱饵：技术方案。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一篇精益创业读后感。",
+      "expected_behavior": "不应激活本 skill，这是读后感写作，不是执行方法调用。",
+      "notes": "诱饵：内容写作。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们做的是医疗硬件，能不能用低成本 MVP 先试？",
+      "expected_behavior": "可激活本 skill 但必须标注安全、合规和硬件验证约束，不能直接套用轻软件实验。",
+      "notes": "边界：高风险行业。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

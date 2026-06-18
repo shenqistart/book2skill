@@ -81,6 +81,29 @@
 
 进入 skill pack：[01-economics-and-trends-skills](./01-economics-and-trends-skills/)
 
+### `02_创业思维` Skills（10 个分类级模块）
+
+**来源**：行者创业系统读书产品中 `02_创业思维` 分类，覆盖小米、段永平、柳井正、沃尔玛、Biz Stone、Peter Thiel、松下幸之助、克里斯坦森、Eric Ries、Ash Maurya、Google、格鲁夫、关明生、Ben Horowitz、David Feinleib、吴晓波、林军/唐宏梅等创业与经营书。
+
+**解决问题**：创始人使命、非共识机会、破坏式入场、MVP 验证、商业模式风险、一线用户飞轮、管理杠杆、人才文化、战时领导和失败复盘。
+
+**特色**：这是一个多书分类级 skill pack，重点整理创业类书之间的互补和冲突关系：先用使命和机会判断选择战场，再用精益验证降低风险，随后用用户现场、组织管理和失败复盘约束扩张。
+
+| 你的问题是... | 推荐使用 |
+|---|---|
+| 这个创业方向为什么值得做，哪些事不能做？ | [`founder-mission-value-system`](./02-entrepreneurship-thinking-skills/founder-mission-value-system/SKILL.md) |
+| 这是不是一个真正不同、可防守的机会？ | [`nonconsensus-monopoly-thesis`](./02-entrepreneurship-thinking-skills/nonconsensus-monopoly-thesis/SKILL.md) |
+| 面对大公司，应该从哪里切入？ | [`disruptive-entry-finder`](./02-entrepreneurship-thinking-skills/disruptive-entry-finder/SKILL.md) |
+| MVP 怎么做，什么时候转向或坚持？ | [`validated-learning-loop`](./02-entrepreneurship-thinking-skills/validated-learning-loop/SKILL.md) |
+| 商业模式里最危险的假设是哪一块？ | [`lean-business-model-risk-map`](./02-entrepreneurship-thinking-skills/lean-business-model-risk-map/SKILL.md) |
+| 用户、门店、口碑和一线反馈如何形成飞轮？ | [`user-frontline-flywheel`](./02-entrepreneurship-thinking-skills/user-frontline-flywheel/SKILL.md) |
+| 管理者该把力气用在哪些高杠杆动作上？ | [`manager-output-leverage`](./02-entrepreneurship-thinking-skills/manager-output-leverage/SKILL.md) |
+| 怎么搭团队、文化和人才标准？ | [`talent-culture-operating-system`](./02-entrepreneurship-thinking-skills/talent-culture-operating-system/SKILL.md) |
+| 公司进入现金、裁员、转型等艰难局面怎么办？ | [`hard-things-wartime-leadership`](./02-entrepreneurship-thinking-skills/hard-things-wartime-leadership/SKILL.md) |
+| 失败到底由哪些链条造成，如何避免重演？ | [`failure-forensics-map`](./02-entrepreneurship-thinking-skills/failure-forensics-map/SKILL.md) |
+
+进入 skill pack：[02-entrepreneurship-thinking-skills](./02-entrepreneurship-thinking-skills/)
+
 ### 《微信背后的产品观》Skills（6 个核心模块）
 
 **来源**：张小龙《微信背后的产品观》。原书为 2021 年出版物，本仓库不收录原文全文，仅保留方法论蒸馏与来源说明。

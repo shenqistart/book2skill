@@ -1,0 +1,51 @@
+{
+  "skill": "failure-forensics-map",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "一个项目增长很快但最后崩了，怎么复盘真正原因？",
+      "expected_behavior": "应激活本 skill，建立时间线并拆解市场、模式、组织、资本和现金链条。",
+      "notes": "失败复盘。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们现在扩张很快，想提前看看有没有大败局式的失败基因。",
+      "expected_behavior": "应激活本 skill 做高风险预演，识别扩张、治理、现金和组织缺陷。",
+      "notes": "失败预演。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "团队把失败都怪在销售负责人身上，但我感觉是模式和现金的问题。",
+      "expected_behavior": "应激活本 skill，避免单因归责，追踪多因子失败链条。",
+      "notes": "反替罪羊。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一篇某公司失败故事的娱乐化文章。",
+      "expected_behavior": "不应激活本 skill，这是故事写作或八卦，不是法医式复盘。",
+      "notes": "诱饵：故事写作。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "请判断这个失败案例里谁应该承担法律责任。",
+      "expected_behavior": "不应激活本 skill，这是法律责任判断，超出范围。",
+      "notes": "诱饵：法律追责。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "危机还在发生，现金快断了，现在适合先复盘失败原因吗？",
+      "expected_behavior": "应提示先转 hard-things-wartime-leadership 处理当下危机，再用本 skill 复盘链条。",
+      "notes": "边界：危机先于复盘。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
