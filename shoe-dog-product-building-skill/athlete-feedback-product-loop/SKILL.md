@@ -12,6 +12,8 @@ related_skills: [field-market-validation, brand-movement-building]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据鲍尔曼轻便跑鞋、华夫鞋底、运动员试穿和产品召回等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

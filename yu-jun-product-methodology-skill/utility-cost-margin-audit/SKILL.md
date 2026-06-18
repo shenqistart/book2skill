@@ -12,6 +12,8 @@ related_skills: [transaction-model-designer, user-value-formula]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据“效用”“边际”“成本”“供需定律”“相对价格”等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

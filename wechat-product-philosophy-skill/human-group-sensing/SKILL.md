@@ -13,6 +13,8 @@ related_skills: [demand-psychology-mining, scenario-boundary-design]
 
 ## R — 来源
 
+> 原书依据见本节来源说明。
+
 依据《用户篇》中“用户是人”、环境反应、懒惰、没耐心、不爱学习、群体心理和草根用户等论述。
 
 ## I — 方法论骨架
