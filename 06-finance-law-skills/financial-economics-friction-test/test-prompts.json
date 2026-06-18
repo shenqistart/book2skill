@@ -1,0 +1,51 @@
+{
+  "skill": "financial-economics-friction-test",
+  "version": "0.1.0",
+  "source_book": "《金融经济学二十五讲》；《公司金融 原书第12版 基础篇》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "CAPM 算出来的资本成本解释不了这个资产的收益，模型前提可能哪里失效？",
+      "expected_behavior": "应激活本 skill，识别均衡模型前提并检查风险、市场组合和摩擦。",
+      "notes": "CAPM 前提。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "市场上看起来有套利机会，为什么没有人把价格打回去？",
+      "expected_behavior": "应激活本 skill，检查无套利复制、交易成本、做空限制和流动性。",
+      "notes": "套利与摩擦。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "有效市场假设和现实价格长期偏离冲突，应该怎么定位模型边界？",
+      "expected_behavior": "应激活本 skill，比较均衡、无套利和金融摩擦三类入口。",
+      "notes": "模型边界。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "请给我一个套利交易步骤，保证赚钱。",
+      "expected_behavior": "不应激活本 skill 输出交易指令或收益承诺；应说明边界。",
+      "notes": "诱饵：交易建议。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个新项目是否值得投资？我只关心现金流 NPV。",
+      "expected_behavior": "不应优先激活本 skill；应调用 capital-budgeting-npv-discipline。",
+      "notes": "诱饵：项目价值。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "模型价格和市场价格不同，但我们不知道是不是流动性、信息还是监管造成的。",
+      "expected_behavior": "可激活本 skill，输出前提检查清单和需要补充的数据。",
+      "notes": "边界：证据不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
