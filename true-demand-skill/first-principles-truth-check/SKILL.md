@@ -12,6 +12,8 @@ related_skills: [business-model-viability-check, consensus-gap-mapping]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据“应然与实然”“第一性原理”“后记 造物之心”等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

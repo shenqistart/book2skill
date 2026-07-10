@@ -1,0 +1,51 @@
+{
+  "skill": "valuation-dilution-clarifier",
+  "version": "0.1.0",
+  "source_book": "《风险投资交易: 条款清单全揭秘》 — Brad Feld, Jason Mendelson",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "投资人说投 2000 万，投后估值 1 亿，他会占多少？",
+      "expected_behavior": "应激活本 skill，区分投后估值和投资金额，计算投资人占比和融资前估值。",
+      "notes": "基础投前投后计算。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "投资人要求投前先扩 15% 期权池，这会稀释谁？",
+      "expected_behavior": "应激活本 skill，说明投前期权池扩充通常由老股东承担稀释，并重建 cap table。",
+      "notes": "期权池隐性稀释。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们有一笔可转债和未行权期权，融资时完全稀释到底怎么算？",
+      "expected_behavior": "应激活本 skill，统一完全稀释分母，列出转换工具和期权对占比的影响。",
+      "notes": "复杂股本口径。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我预测明年 AI SaaS 的合理估值倍数。",
+      "expected_behavior": "不应激活本 skill 给出预测，应说明需要实时市场数据和具体公司指标。",
+      "notes": "诱饵：市场预测。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这份 TS 的董事会席位和保护性条款是否危险？",
+      "expected_behavior": "不应优先激活本 skill，应转 term-sheet-economics-control-audit 或 founder-control-threshold-map。",
+      "notes": "诱饵：控制条款。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "这轮稀释后创始人从 52% 到 38%，还算有控制权吗？",
+      "expected_behavior": "应先用本 skill 计算稀释，再组合 founder-control-threshold-map 判断控制权阈值变化。",
+      "notes": "边界：比例计算与控制权判断交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

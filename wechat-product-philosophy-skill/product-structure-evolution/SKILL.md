@@ -13,6 +13,8 @@ related_skills: [scenario-boundary-design, natural-growth-judgment, product-spir
 
 ## R — 来源
 
+> 原书依据见本节来源说明。
+
 依据《设计篇》中“产品是进化出来的”、产品 DNA、结构优先、分类、抽象、有机联系和平台核心架构等论述。
 
 ## I — 方法论骨架
