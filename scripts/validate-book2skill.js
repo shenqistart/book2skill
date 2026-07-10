@@ -153,6 +153,31 @@ function checkTestPrompts(skill) {
   }
 }
 
+function checkIndexLinks(skills) {
+  if (!exists("INDEX.md")) return;
+
+  const index = read("INDEX.md");
+  const linkedSkills = new Set();
+  const linkPattern = /\]\((?:\.\/)?([^/)]+)\/SKILL\.md\)/g;
+  let match;
+
+  while ((match = linkPattern.exec(index)) !== null) {
+    linkedSkills.add(match[1]);
+  }
+
+  for (const linkedSkill of linkedSkills) {
+    if (!skills.includes(linkedSkill)) {
+      fail(`INDEX.md links to missing skill: ${linkedSkill}`);
+    }
+  }
+
+  for (const skill of skills) {
+    if (!linkedSkills.has(skill)) {
+      fail(`INDEX.md does not link to skill: ${skill}`);
+    }
+  }
+}
+
 function main() {
   if (!fs.existsSync(root)) {
     console.error(`Pack directory not found: ${root}`);
@@ -171,6 +196,8 @@ function main() {
     checkTestPrompts(skill);
   }
 
+  checkIndexLinks(skills);
+
   if (warnings.length) {
     console.log("Warnings:");
     for (const message of warnings) console.log(`- ${message}`);
@@ -186,4 +213,3 @@ function main() {
 }
 
 main();
-

@@ -1,0 +1,51 @@
+{
+  "skill": "freedom-responsibility-culture",
+  "version": "1.0.0",
+  "source_book": "《奈飞文化手册》",
+  "darwin_compatible": true,
+  "minimum_pass_rate": 0.8,
+  "test_cases": [
+    {
+      "id": "trigger-001",
+      "type": "should_trigger",
+      "prompt": "我们审批流程太多，成熟团队觉得被束缚，想试着减少流程但保留责任，怎么做？",
+      "expected_behavior": "调用 skill，识别低价值流程、补上下文、定义责任行为和试点。",
+      "notes": "自由与责任文化触发。"
+    },
+    {
+      "id": "trigger-002",
+      "type": "should_trigger",
+      "prompt": "公司说要坦诚，但大家只敢背后吐槽。怎么建立事实导向的坦诚机制？",
+      "expected_behavior": "调用 skill，设计坦诚辩论、反馈、复盘和边界。",
+      "notes": "坦诚文化触发。"
+    },
+    {
+      "id": "trigger-003",
+      "type": "should_trigger",
+      "prompt": "我们想取消差旅审批，但担心费用失控，帮我按自由与责任设计试点。",
+      "expected_behavior": "调用 skill，输出上下文、责任、必要纪律、试点和复盘指标。",
+      "notes": "流程替代场景。"
+    },
+    {
+      "id": "nontrigger-001",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一份让员工必须服从加班安排的制度。",
+      "expected_behavior": "不调用 skill；这与自由责任文化不符，并可能涉及劳动合规。",
+      "notes": "错误管理意图。"
+    },
+    {
+      "id": "nontrigger-002",
+      "type": "should_not_trigger",
+      "prompt": "我们财务合规很薄弱，想取消所有报销规则以提高效率。",
+      "expected_behavior": "不应直接调用为取消规则背书；应提示高风险边界和专业审查。",
+      "notes": "高风险规则不能轻易去除。"
+    },
+    {
+      "id": "edge-001",
+      "type": "edge_case",
+      "prompt": "团队能力参差不齐，但老板很想立刻复制奈飞的无审批制度。",
+      "expected_behavior": "调用 skill 的边界段，提醒不要照搬，先评估人才密度和上下文。",
+      "notes": "测试不照搬 Netflix。"
+    }
+  ]
+}

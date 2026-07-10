@@ -13,6 +13,8 @@ related_skills: [demand-psychology-mining, product-structure-evolution]
 
 ## R — 来源
 
+> 原书依据见本节来源说明。
+
 依据书中“只抓主场景”“面向场景来做设计”“让功能存在无形之中”“宁愿损失功能也不损失体验”等论述。
 
 ## I — 方法论骨架

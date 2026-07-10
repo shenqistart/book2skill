@@ -38,8 +38,10 @@
 
 ## 验证方式
 
-发布前运行：
+已运行：
 
 ```bash
 node scripts/validate-book2skill.js 05-growth-and-traffic-skills
 ```
+
+结果：`Validation passed: 05-growth-and-traffic-skills (10 skills)`。

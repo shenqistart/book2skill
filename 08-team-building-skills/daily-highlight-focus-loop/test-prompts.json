@@ -1,0 +1,51 @@
+{
+  "skill": "daily-highlight-focus-loop",
+  "version": "1.0.0",
+  "source_book": "《创造时间》",
+  "darwin_compatible": true,
+  "minimum_pass_rate": 0.8,
+  "test_cases": [
+    {
+      "id": "trigger-001",
+      "type": "should_trigger",
+      "prompt": "这个星期每天都在开会，增长实验完全没推进。帮我设计明天的重点和防打扰方案。",
+      "expected_behavior": "调用 skill，输出 Highlight、时间块、Laser 清理、能量安排和复盘。",
+      "notes": "忙碌但重要事项未推进。"
+    },
+    {
+      "id": "trigger-002",
+      "type": "should_trigger",
+      "prompt": "我们的 OKR 已定，但每个人不知道今天应该优先做什么。",
+      "expected_behavior": "调用 skill，将 OKR 映射到每日 Highlight；必要时提醒目标质量问题。",
+      "notes": "OKR 到日执行的触发。"
+    },
+    {
+      "id": "trigger-003",
+      "type": "should_trigger",
+      "prompt": "我总被群消息和邮件打断，想给团队建立一个每日专注规则。",
+      "expected_behavior": "调用 skill，识别干扰源并设计团队级专注规则。",
+      "notes": "注意力防护明确触发。"
+    },
+    {
+      "id": "nontrigger-001",
+      "type": "should_not_trigger",
+      "prompt": "帮我设计公司未来三年的组织架构。",
+      "expected_behavior": "不调用 skill；这是长期组织设计，不是日级注意力循环。",
+      "notes": "超出范围。"
+    },
+    {
+      "id": "nontrigger-002",
+      "type": "should_not_trigger",
+      "prompt": "帮我做一份完整项目甘特图，包括所有里程碑、依赖和资源。",
+      "expected_behavior": "不调用 skill；应使用项目管理方法。",
+      "notes": "本 skill 不替代项目排期。"
+    },
+    {
+      "id": "edge-001",
+      "type": "edge_case",
+      "prompt": "我有十件事都很重要，能不能都设成 Highlight？",
+      "expected_behavior": "调用 skill 并纠偏，要求选择一个主 Highlight，其他进入待办或重新审视 OKR。",
+      "notes": "测试是否能抵抗重点膨胀。"
+    }
+  ]
+}
