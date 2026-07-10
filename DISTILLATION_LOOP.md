@@ -1,6 +1,6 @@
 # book2skill 持久蒸馏循环
 
-本文档记录本仓库后续批量蒸馏的固定循环。当前 goal 已建立，首个目标分类为 `01_经济学和大势`。
+本文档记录本仓库后续批量蒸馏的固定循环。当前 goal 已建立，按产品主题分类逐批蒸馏；当前一级主题已完成一轮覆盖。
 
 ## 完成标准
 
@@ -12,7 +12,7 @@
 4. 每个 skill 都有 `test-prompts.json`，且包含 `should_trigger`、`should_not_trigger`、`edge_case` 三类测试。
 5. `candidates/`、`verified.md`、`rejected/` 保留审计轨迹。
 6. 本地确定性校验通过：`node scripts/validate-book2skill.js <skill-pack-dir>`。
-7. README 有入口，git 只提交本轮相关文件，随后推送到 `origin/main`。
+7. README 有入口，git 只提交本轮相关文件，随后推送到 `shenqistart/book2skill` 对应远端分支。
 
 ## 循环
 
@@ -56,6 +56,12 @@
 
 ## 当前队列
 
-- `01_经济学和大势`: 进行中。
-- 下一批主题: 待从产品主题目录读取后进入队列。
-
+- `01_经济学和大势`: 已完成本地结构校验，已推送到 `codex/economics-trends-skills`，PR #3 处于 draft/open 且 mergeable。
+- `02_创业思维`: 本轮已完成 22 个源文件项的来源质量门、10 个分类级 skills、书籍关系图、测试 prompts 和本地结构校验。
+- `03_如何做产品`: 已完成产品专题 pack。
+- `04_营销和定位`: 已完成 13 本源文件项的来源质量门、11 个分类级 skills、书籍关系图、测试 prompts 和本地结构校验。
+- `05_增长和流量`: 已完成 9 本可用源书、10 个分类级 skills、书籍关系图、测试 prompts 和本地结构校验；64 号书未发现源文本，已记录。
+- `06_财务金融和法律`: 已完成 8 个分类级 skills、书籍关系图、测试 prompts 和本地结构校验；`78.什么是金融` 需重新 OCR 后才能进入 quote-level 单书蒸馏。
+- `07_股权分配和融资`: 已完成 7 本可用源书、8 个分类级 skills、书籍关系图、测试 prompts 和本地结构校验；已推送到 `codex/equity-financing-skills-07`。
+- `08_团队建设`: 已完成分类级 skill pack。
+- 下一批主题: 当前产品主题目录已无新的一级主题；后续优先处理弱源文本重 OCR、单书级拆分或新增主题。

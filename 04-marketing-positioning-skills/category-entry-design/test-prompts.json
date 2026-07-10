@@ -1,0 +1,51 @@
+{
+  "skill": "category-entry-design",
+  "version": "0.1.0",
+  "source_book": "《21世纪的定位》《升级定位》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们这个产品介于知识库和 AI 助理之间，用户不知道该怎么理解，是否要定义新品类？",
+      "expected_behavior": "应激活本 skill，分析旧品类拥挤度、变化源和新品类入口。",
+      "notes": "新品类判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们不想和传统健身房打，能不能开一个新的消费品类？",
+      "expected_behavior": "应激活本 skill，判断是否有新的场景、用户问题和可命名入口。",
+      "notes": "避开旧赛道。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "给这个新服务起名时，是叫工具、平台、助手还是工作流？",
+      "expected_behavior": "应激活本 skill，从用户分类入口和购买路径判断命名。",
+      "notes": "品类命名。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们的品类已经是牙膏，现在想优化详情页文案。",
+      "expected_behavior": "不应优先激活本 skill，应先做具体传播或转化优化。",
+      "notes": "诱饵：品类已清楚。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我设计一个好看的图标。",
+      "expected_behavior": "不应激活本 skill，除非图标背后涉及品类识别。",
+      "notes": "诱饵：单纯视觉设计。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想把普通课程包装成一个全新的学习系统。",
+      "expected_behavior": "应谨慎使用本 skill，先检查是否有真实方法差异，避免新品类伪包装。",
+      "notes": "边界：新品类包装风险。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

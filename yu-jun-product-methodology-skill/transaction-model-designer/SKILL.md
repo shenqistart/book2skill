@@ -12,6 +12,8 @@ related_skills: [user-model-builder, utility-cost-margin-audit]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据“产品即交易”“什么是交易模型”“产品经理为什么要关注交易”等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

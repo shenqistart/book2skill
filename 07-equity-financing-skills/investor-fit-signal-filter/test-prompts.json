@@ -1,0 +1,51 @@
+{
+  "skill": "investor-fit-signal-filter",
+  "version": "0.1.0",
+  "source_book": "《穿越寒冬》 — 史蒂文·霍夫曼；《创业之初你不可不知的融资知识》 — 桂曙光",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们是早期 SaaS 公司，有天使、产业方和一家大 VC 都想聊，应该优先见谁？",
+      "expected_behavior": "应激活本 skill，按阶段、金额、回报模型、资源和冲突筛选投资人优先级。",
+      "notes": "典型投资人排序。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "一个潜在客户的竞争对手想战略投资我们，这钱能拿吗？",
+      "expected_behavior": "应激活本 skill，重点分析客户冲突、未来融资、退出限制和信息隔离。",
+      "notes": "企业投资人冲突。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们想做投资人名单，除了行业相关还应该筛什么？",
+      "expected_behavior": "应激活本 skill，输出投资人类型、基金阶段、单笔金额、被投反馈和决策流程筛选表。",
+      "notes": "名单筛选标准。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我查一下今年最活跃的 20 家 AI 投资机构名单。",
+      "expected_behavior": "不应仅激活本 skill，应进行实时搜索或说明需要最新数据。",
+      "notes": "诱饵：实时机构名单。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我解读这份 TS 里的反稀释和清算优先权。",
+      "expected_behavior": "不应优先激活本 skill，应转 term-sheet-economics-control-audit。",
+      "notes": "诱饵：条款审计。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们还没准备好数据，但有投资人主动来聊，要不要见？",
+      "expected_behavior": "应先组合 financing-readiness-runway 判断准备度，再用本 skill 判断是否值得低成本接触。",
+      "notes": "边界：准备度与投资人筛选交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

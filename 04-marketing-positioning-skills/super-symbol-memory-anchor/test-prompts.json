@@ -1,0 +1,51 @@
+{
+  "skill": "super-symbol-memory-anchor",
+  "version": "0.1.0",
+  "source_book": "《超级符号就是超级创意》 — 华杉、华楠",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这个新品牌 logo 很高级，但用户看完记不住，帮我判断问题。",
+      "expected_behavior": "应激活本 skill，检查定位锚、公共记忆、认知成本和触点复用。",
+      "notes": "符号记忆问题。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们新品类解释成本太高，能不能用一个符号让用户一眼懂？",
+      "expected_behavior": "应激活本 skill，寻找可借力的公共符号和记忆锚。",
+      "notes": "新品类符号化。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "包装、短视频、门店和口播都不统一，品牌识别很散。",
+      "expected_behavior": "应激活本 skill，检查符号跨触点复用。",
+      "notes": "符号系统一致性。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我画一个赛博朋克风格插画。",
+      "expected_behavior": "不应激活本 skill，这是艺术风格生成，不是品牌记忆锚。",
+      "notes": "诱饵：纯视觉风格。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个商标是否侵权？",
+      "expected_behavior": "不应激活本 skill，需要法律和商标检索。",
+      "notes": "诱饵：法律结论。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想用传统文化符号做品牌识别，会不会显得俗？",
+      "expected_behavior": "可激活本 skill 检查公共记忆和误读风险，但不直接做审美裁判。",
+      "notes": "边界：文化符号与审美判断。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

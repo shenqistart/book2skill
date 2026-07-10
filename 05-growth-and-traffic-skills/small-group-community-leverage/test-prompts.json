@@ -1,0 +1,51 @@
+{
+  "skill": "small-group-community-leverage",
+  "version": "0.1.0",
+  "source_book": "《小群效应》 — 徐志斌",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的大社群有 2000 人但没人说话，应该怎么拆小群提高互动？",
+      "expected_behavior": "应激活本 skill，诊断社群类型、关系密度、三近一反、连接者和小群任务。",
+      "notes": "大群沉默。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "怎么找社群里的连接者，让小群带动转化和留存？",
+      "expected_behavior": "应激活本 skill，识别连接者角色并设计互动机制。",
+      "notes": "连接者触发。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "一个学习产品想用熟人小组提高打卡完成率，怎么设计？",
+      "expected_behavior": "应激活本 skill，使用小群任务、反馈和关系近/兴趣近机制。",
+      "notes": "小群任务。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我买机器人在群里刷互动，让社群看起来热闹。",
+      "expected_behavior": "不应激活本 skill；应拒绝虚假互动方向。",
+      "notes": "诱饵：机器人灌水。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们没有共同话题，也没有用户价值，只想把人都拉进一个群。",
+      "expected_behavior": "不应激活本 skill 设计表面社群；应提示先定义共同价值。",
+      "notes": "诱饵：无社群价值。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "社群涉及健康隐私问题，还能用小群提高互动吗？",
+      "expected_behavior": "可谨慎激活，但必须提示隐私和合规边界，降低公开互动压力。",
+      "notes": "边界：隐私高风险。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

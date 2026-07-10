@@ -1,0 +1,51 @@
+{
+  "skill": "finance-question-router",
+  "version": "0.1.0",
+  "source_book": "《应用公司理财》；《创业投资法律手册》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们准备融资，投资人给了估值和对赌条款，我想知道估值、股权和协议整体靠谱吗？",
+      "expected_behavior": "应激活本 skill，先分流为估值、融资结构和法律契约三条路线，再推荐后续 skills。",
+      "notes": "典型混合入口。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "公司账上有现金，但也有一个新项目和一笔债务，要不要分红？",
+      "expected_behavior": "应激活本 skill，识别投资、现金返还和融资约束的组合，而不是直接建议分红。",
+      "notes": "三问同时出现。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个资本方案到底应该从财务、金融模型还是法律角度看？",
+      "expected_behavior": "应激活本 skill，给出主入口、次入口、缺失事实和调用顺序。",
+      "notes": "用户明确要求分流。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "请解释一下净现值 NPV 的定义。",
+      "expected_behavior": "不应激活本 skill，这是单一概念解释，可直接解释或调用 NPV skill。",
+      "notes": "诱饵：定义查询。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我起草一份完整的股权转让协议。",
+      "expected_behavior": "不应激活本 skill；应说明不能替代律师起草，并可建议法律风险清单。",
+      "notes": "诱饵：法律文书服务。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们只想知道本轮估值是不是太高，但估值会影响控制权和后续融资。",
+      "expected_behavior": "可先激活本 skill，因为表面是估值问题，实质还涉及融资结构和法律控制权。",
+      "notes": "边界：单一问题中隐含多入口。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

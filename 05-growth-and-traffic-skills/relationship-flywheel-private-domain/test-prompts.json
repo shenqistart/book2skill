@@ -1,0 +1,51 @@
+{
+  "skill": "relationship-flywheel-private-domain",
+  "version": "0.1.0",
+  "source_book": "《关系飞轮》 — 车军",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的私域群人数不少，但复购和转介绍很差，怎么设计关系飞轮？",
+      "expected_behavior": "应激活本 skill，诊断关系对象、留存理由、超级用户路径和复购转介绍循环。",
+      "notes": "私域关系飞轮。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "怎么识别并运营超级用户，让他们贡献反馈、内容和推荐？",
+      "expected_behavior": "应激活本 skill，输出超级用户标准、权益、反馈和贡献路径。",
+      "notes": "超级用户触发。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们现在的企微触达像广告轰炸，怎么改成用户愿意留下来的关系？",
+      "expected_behavior": "应激活本 skill，用可信、可亲、可爱维度重设关系动作。",
+      "notes": "触达转关系。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一个每天群发三次促销消息的私域 SOP。",
+      "expected_behavior": "不应激活本 skill 输出骚扰式触达；应提示私域不是群发广告。",
+      "notes": "诱饵：群发促销。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "产品售后很差，但我想先用私域把用户留住。",
+      "expected_behavior": "不应优先激活本 skill；应先处理体验和复购底座。",
+      "notes": "诱饵：体验未站稳。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们的品类很低频，还适合做私域关系飞轮吗？",
+      "expected_behavior": "可激活本 skill，但应提示低频品类要用内容、服务或转介绍价值承接，不宜高频打扰。",
+      "notes": "边界：低频品类。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

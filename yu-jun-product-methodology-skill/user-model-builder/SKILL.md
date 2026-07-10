@@ -12,6 +12,8 @@ related_skills: [transaction-model-designer, user-value-formula]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据“用户模型——产品经理要研究用户行为及其背后的原理”“用户不是自然人，而是需求的集合”等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

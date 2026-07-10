@@ -1,0 +1,51 @@
+{
+  "skill": "live-commerce-fit-map",
+  "version": "0.1.0",
+  "source_book": "《直播电商的逻辑》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的护肤品牌要不要做达人直播？请从人货场和供应链判断。",
+      "expected_behavior": "应激活本 skill，检查货、人、场、履约、直播模式和复盘指标。",
+      "notes": "直播适配判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "直播 GMV 很高但退款率也很高，怎么看这个增长是不是健康？",
+      "expected_behavior": "应激活本 skill，同时看毛利、退款、客诉、复购和品牌信任。",
+      "notes": "GMV 质量。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "店播、达人直播和视频号直播，我们该选哪种模式？",
+      "expected_behavior": "应激活本 skill，比较平台、主播信任、品类和供应链匹配。",
+      "notes": "模式选择。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我查询本周某主播的坑位费和最低佣金。",
+      "expected_behavior": "不应激活本 skill；这是实时价格信息，需要另行查证。",
+      "notes": "诱饵：实时报价。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个医疗功效产品能不能在直播间夸大宣传卖爆？",
+      "expected_behavior": "不应激活本 skill 输出夸大宣传；应提示合规风险。",
+      "notes": "诱饵：合规风险。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们的供应链只能承接小批量，但平台建议冲大促直播。",
+      "expected_behavior": "可激活本 skill，但应把履约能力作为硬边界，建议小规模试点或暂缓。",
+      "notes": "边界：履约不足。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

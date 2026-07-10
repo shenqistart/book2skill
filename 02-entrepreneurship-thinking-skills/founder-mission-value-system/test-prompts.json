@@ -1,0 +1,51 @@
+{
+  "skill": "founder-mission-value-system",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们有个增长动作很赚钱，但会明显牺牲老用户体验，这件事该不该做？",
+      "expected_behavior": "应激活本 skill，先检查用户价值、长期信任和不做清单，再给出条件判断。",
+      "notes": "典型价值边界判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我想创业，但团队对使命和哪些事不能做没有共识，怎么梳理？",
+      "expected_behavior": "应激活本 skill，把使命改写为目标用户、核心价值、能力圈和不做清单。",
+      "notes": "使命落地场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个机会利润很高，但我们不确定是不是超出了能力圈，帮我判断。",
+      "expected_behavior": "应激活本 skill，检查能力圈、长期主义和不该赚的钱。",
+      "notes": "本分与能力边界。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一段更燃的公司愿景口号。",
+      "expected_behavior": "不应激活本 skill，这是文案写作，不是使命经营边界判断。",
+      "notes": "诱饵：口号。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我估算这轮融资应该让出多少股份。",
+      "expected_behavior": "不应激活本 skill，这是融资交易问题，超出本 skill 边界。",
+      "notes": "诱饵：融资条款。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想做一个小众市场机会，但还没想清楚为什么必须由我们做。",
+      "expected_behavior": "可先用本 skill 澄清使命和能力圈，再转 nonconsensus-monopoly-thesis 判断机会结构。",
+      "notes": "边界：使命与机会判断相连。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
