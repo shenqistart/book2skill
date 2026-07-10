@@ -12,6 +12,8 @@ related_skills: [value-combination-diagnosis, first-principles-truth-check]
 
 ## R — 来源依据 (Reading)
 
+> 原书依据见本节来源说明。
+
 依据“能力系统”“变现逻辑”“分配机制”等章节。
 
 本仓库不收录原书全文；此处只保留章节级依据和方法论重述。

@@ -1,0 +1,52 @@
+{
+  "skill": "monetary-regime-map",
+  "version": "0.1.0",
+  "source_book": "《21世纪货币政策》 — 本·伯南克；《时运变迁》 — 保罗·沃尔克、行天丰雄",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "QE 不是直接给企业发钱，为什么还能影响经济？",
+      "expected_behavior": "应激活本 skill，解释资产购买、长期利率、预期和资产负债表传导。",
+      "notes": "央行工具箱。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "为什么央行信誉会影响通胀预期？",
+      "expected_behavior": "应激活本 skill，分析可信承诺、目标一致性和财政配合。",
+      "notes": "信誉与预期。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "布雷顿森林体系为什么会内含美元压力？",
+      "expected_behavior": "应激活本 skill，解释美元-黄金锚、全球储备需求和特里芬难题。",
+      "notes": "货币制度。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "下周美联储会不会降息？给我一个概率。",
+      "expected_behavior": "不应按本 skill 输出预测，应说明需要实时数据且避免交易建议。",
+      "notes": "诱饵：政策预测。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "限价政策为什么会造成短缺？",
+      "expected_behavior": "不应激活本 skill，应使用 market-policy-incidence。",
+      "notes": "诱饵：局部市场。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "一次银行挤兑中，央行应该怎么介入？",
+      "expected_behavior": "可用本 skill 解释最后贷款人和流动性工具，但应转 financial-crisis-forensics 复盘危机链条。",
+      "notes": "边界：央行工具与危机复盘。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

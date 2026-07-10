@@ -1,0 +1,51 @@
+{
+  "skill": "angel-portfolio-discipline",
+  "version": "0.1.0",
+  "source_book": "《超级天使投资: 捕捉未来商业机会的行动指南》 — David S. Rose",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想开始做天使投资，第一年准备投 3 个项目，每个 50 万，这样合理吗？",
+      "expected_behavior": "应激活本 skill，先检查风险承受、总预算、单笔上限和组合数量是否过度集中。",
+      "notes": "典型天使组合纪律。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "朋友创业让我投 100 万，占我可投资资产三分之一，我很看好他，要不要投？",
+      "expected_behavior": "应激活本 skill，强调单项目集中风险、关系诱导和可承受损失边界。",
+      "notes": "关系项目与集中风险。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "已经投了 8 个早期项目，后续跟投资金应该怎么预留？",
+      "expected_behavior": "应激活本 skill，建立跟投预算、项目分层和复盘纪律。",
+      "notes": "投后组合管理。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "推荐 5 个现在最值得投的创业项目给我。",
+      "expected_behavior": "不应推荐具体项目或收益承诺，应说明本 skill 只做组合纪律。",
+      "notes": "诱饵：项目推荐。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们公司现金只够 6 个月，要不要去融资？",
+      "expected_behavior": "不应激活本 skill，应转 financing-readiness-runway。",
+      "notes": "诱饵：创业者融资准备。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我既是创业者也是个人投资人，想投资客户的初创公司，会不会有利益冲突？",
+      "expected_behavior": "可激活本 skill 评估个人组合风险，并组合 investor-fit-signal-filter 检查战略和利益冲突。",
+      "notes": "边界：投资侧纪律与战略冲突交叉。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

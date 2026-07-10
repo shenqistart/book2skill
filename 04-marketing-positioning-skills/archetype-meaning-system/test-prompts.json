@@ -1,0 +1,51 @@
+{
+  "skill": "archetype-meaning-system",
+  "version": "0.1.0",
+  "source_book": "《很久很久以前》《如何让品牌直击人心》",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的品牌文案有时像专业顾问，有时像热血英雄，调性很乱，怎么统一？",
+      "expected_behavior": "应激活本 skill，识别主原型、辅助原型和表达系统。",
+      "notes": "品牌人格不一致。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这个户外品牌应该用探索者原型还是英雄原型？",
+      "expected_behavior": "应激活本 skill，根据用户欲望、产品本质和证据选择原型。",
+      "notes": "原型选择。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们想讲品牌故事，但不想变成空洞宣传。",
+      "expected_behavior": "应激活本 skill，把故事连接到原型意义和组织行为。",
+      "notes": "品牌故事。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "给我 20 个高级感品牌形容词。",
+      "expected_behavior": "不应激活本 skill，形容词列表不是原型系统。",
+      "notes": "诱饵：调性词库。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个品牌的品类和定位还没定，先讲一个传奇故事。",
+      "expected_behavior": "不应优先激活本 skill，应先做定位和证据检查。",
+      "notes": "诱饵：定位未定。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想借神话故事做品牌表达，但担心文化挪用。",
+      "expected_behavior": "可用本 skill 检查原型匹配，但必须额外审查文化语境和误读风险。",
+      "notes": "边界：文化符号风险。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

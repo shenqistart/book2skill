@@ -1,0 +1,51 @@
+{
+  "skill": "manager-output-leverage",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我每天都在救火，团队却没有更高产出，管理者应该把时间投在哪里？",
+      "expected_behavior": "应激活本 skill，用经理人产出公式和高杠杆活动重新排序管理动作。",
+      "notes": "管理者产出。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们会议很多但决策很慢，指标也没有带来改善，怎么调整？",
+      "expected_behavior": "应激活本 skill，检查会议类型、配对指标、信息流和决策机制。",
+      "notes": "会议与指标。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "创始人不能再亲自盯所有事情了，如何通过团队拿结果？",
+      "expected_behavior": "应激活本 skill，把个人执行转为授权、培训、流程和指标杠杆。",
+      "notes": "从个人英雄到管理杠杆。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我设计一个番茄钟工作法。",
+      "expected_behavior": "不应激活本 skill，这是个人效率技巧。",
+      "notes": "诱饵：个人时间管理。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想写公司价值观口号，越有感染力越好。",
+      "expected_behavior": "不应激活本 skill，这是文案或文化表达，不是管理杠杆设计。",
+      "notes": "诱饵：价值观文案。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "公司现金紧张，管理节奏混乱，还要不要先优化会议？",
+      "expected_behavior": "应提示如果现金危机已成主约束，先转 hard-things-wartime-leadership，再用本 skill 修复管理节奏。",
+      "notes": "边界：危机优先。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

@@ -1,0 +1,51 @@
+{
+  "skill": "okr-alignment-review-cadence",
+  "version": "1.0.0",
+  "source_book": "《OKR：源于英特尔和谷歌的目标管理利器》《这就是OKR》",
+  "darwin_compatible": true,
+  "minimum_pass_rate": 0.8,
+  "test_cases": [
+    {
+      "id": "trigger-001",
+      "type": "should_trigger",
+      "prompt": "OKR 已经发布，但各团队各做各的，月底才发现关键结果口径不一致，帮我设计对齐节奏。",
+      "expected_behavior": "调用 skill，输出目标地图、纵横对齐、检查节奏、CFR 和复盘方式。",
+      "notes": "典型 OKR 运行问题。"
+    },
+    {
+      "id": "trigger-002",
+      "type": "should_trigger",
+      "prompt": "我们每周 OKR 会只是在报进度，没有解决依赖和风险，怎么改？",
+      "expected_behavior": "调用 skill，将例会改为 KR 变化、风险、依赖和调整决策。",
+      "notes": "检查节奏低效。"
+    },
+    {
+      "id": "trigger-003",
+      "type": "should_trigger",
+      "prompt": "季度复盘除了打分还应该复盘什么？如何加入反馈和认可？",
+      "expected_behavior": "调用 skill，包含评分、反思问题、继续停止改变和 CFR。",
+      "notes": "复盘与 CFR 触发。"
+    },
+    {
+      "id": "nontrigger-001",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这组目标从任务清单改成 KR。",
+      "expected_behavior": "不调用本 skill；应调用 okr-quality-design。",
+      "notes": "目标质量问题。"
+    },
+    {
+      "id": "nontrigger-002",
+      "type": "should_not_trigger",
+      "prompt": "帮我排一个普通项目的甘特图和每日站会。",
+      "expected_behavior": "不调用 skill；这是项目管理节奏，不一定是 OKR 系统。",
+      "notes": "避免泛化为项目管理。"
+    },
+    {
+      "id": "edge-001",
+      "type": "edge_case",
+      "prompt": "目标执行中途市场变化很大，能不能改 OKR？",
+      "expected_behavior": "调用 skill，允许有纪律调整，要求记录事实变化、影响和复盘。",
+      "notes": "测试调整边界。"
+    }
+  ]
+}

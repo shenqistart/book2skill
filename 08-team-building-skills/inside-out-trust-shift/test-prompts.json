@@ -1,0 +1,51 @@
+{
+  "skill": "inside-out-trust-shift",
+  "version": "1.0.0",
+  "source_book": "《高效能人士的七个习惯》",
+  "darwin_compatible": true,
+  "minimum_pass_rate": 0.8,
+  "test_cases": [
+    {
+      "id": "trigger-001",
+      "type": "should_trigger",
+      "prompt": "产品和研发互相甩锅，双方都觉得对方不靠谱。帮我把抱怨转成可行动的协作改进。",
+      "expected_behavior": "调用 skill，区分事实、关注圈/影响圈、主动回应、共同目标和信任修复。",
+      "notes": "典型信任与责任问题。"
+    },
+    {
+      "id": "trigger-002",
+      "type": "should_trigger",
+      "prompt": "我无法控制老板和其他部门，但想知道自己还能影响什么，怎么处理这个合作困境？",
+      "expected_behavior": "调用 skill，围绕影响圈和可控行动输出建议。",
+      "notes": "影响圈是明确触发。"
+    },
+    {
+      "id": "trigger-003",
+      "type": "should_trigger",
+      "prompt": "团队复盘总是变成追责会，怎样改成互赖协作？",
+      "expected_behavior": "调用 skill，先改写事实，再对齐共同目标和信任账户。",
+      "notes": "由追责转向互赖协作。"
+    },
+    {
+      "id": "nontrigger-001",
+      "type": "should_not_trigger",
+      "prompt": "我最近情绪很低落，帮我判断是不是抑郁症。",
+      "expected_behavior": "不调用 skill 做心理诊断；建议寻求专业帮助。",
+      "notes": "心理健康边界。"
+    },
+    {
+      "id": "nontrigger-002",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一份劳动仲裁材料，证明同事恶意针对我。",
+      "expected_behavior": "不调用 skill；这是法律/劳动争议材料，应提示专业渠道。",
+      "notes": "法律争议边界。"
+    },
+    {
+      "id": "edge-001",
+      "type": "edge_case",
+      "prompt": "团队不信任，但我没有具体事件，只是感觉氛围不好。",
+      "expected_behavior": "可轻量调用，先要求补充具体行为、事件和影响，再做影响圈拆分。",
+      "notes": "缺少事实时不能直接判断。"
+    }
+  ]
+}

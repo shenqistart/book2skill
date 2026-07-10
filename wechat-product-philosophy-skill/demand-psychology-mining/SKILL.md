@@ -13,6 +13,8 @@ related_skills: [human-group-sensing, scenario-boundary-design]
 
 ## R — 来源
 
+> 原书依据见本节来源说明。
+
 依据《需求篇》中关于否定新点子、不照搬用户说法、寻找心理诉求，以及漂流瓶、附近的人、摇一摇、朋友圈、Web 微信等案例。
 
 ## I — 方法论骨架

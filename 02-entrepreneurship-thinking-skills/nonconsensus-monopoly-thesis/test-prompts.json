@@ -1,0 +1,51 @@
+{
+  "skill": "nonconsensus-monopoly-thesis",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们想做一个 AI 写作工具，但感觉赛道很红海，怎么判断有没有真正不同的机会？",
+      "expected_behavior": "应激活本 skill，提炼非共识命题、小市场立足点和防守结构。",
+      "notes": "典型红海机会判断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "投资人说市场很大，但我担心我们只是另一个同质化产品。",
+      "expected_behavior": "应激活本 skill，拆解市场定义、独特供给和竞争结构。",
+      "notes": "大市场叙事校验。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "怎样找到可以先占住的小市场，而不是一开始和大公司硬碰？",
+      "expected_behavior": "应激活本 skill，要求定义初始小市场、可扩张顺序和防守优势。",
+      "notes": "小市场起步。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把已经确定的需求拆成两周开发排期。",
+      "expected_behavior": "不应激活本 skill，这是工程排期，不是机会结构判断。",
+      "notes": "诱饵：执行排期。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "今天某只股票会不会上涨？",
+      "expected_behavior": "不应激活本 skill，这是投资预测，超出范围。",
+      "notes": "诱饵：证券预测。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们发现一个大公司不愿意服务的低端客户群，这算非共识还是破坏式创新？",
+      "expected_behavior": "可先用本 skill 判断机会假说，再转 disruptive-entry-finder 判断低端入场路径。",
+      "notes": "边界：机会假说与入场路径。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

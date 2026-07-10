@@ -1,0 +1,52 @@
+{
+  "skill": "china-reform-path",
+  "version": "0.1.0",
+  "source_book": "《分析与思考》 — 黄奇帆；《激荡三十年》 — 吴晓波",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这项要素市场化改革会怎样改变企业和地方政府激励？",
+      "expected_behavior": "应激活本 skill，按旧约束、改革抓手、新激励、受益主体和风险边界分析。",
+      "notes": "制度改革。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "一家中国企业的崛起，怎么判断是企业家能力还是踩中了政策窗口？",
+      "expected_behavior": "应激活本 skill，放回制度窗口、资本条件、准入和市场需求分析。",
+      "notes": "企业史与制度窗口。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个政策是短期刺激，还是能释放长期制度红利？",
+      "expected_behavior": "应激活本 skill，识别供给侧机制、资源配置和持续生产率证据。",
+      "notes": "改革红利判断。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "美国 19 世纪铁路如何降低运输成本？",
+      "expected_behavior": "不应激活本 skill，应使用 creative-destruction-vitality 或普通经济史解释。",
+      "notes": "诱饵：非中国语境。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "请站队评价某项政策是好是坏。",
+      "expected_behavior": "不应按本 skill 做意识形态表态，应转为机制分析或拒绝站队。",
+      "notes": "诱饵：站队。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "地方试点产业基金支持先进制造，这属于改革路径还是产业政策？",
+      "expected_behavior": "可先用本 skill 定位制度路径，再转 industrial-policy-discipline 检查绩效纪律。",
+      "notes": "边界：改革与产业政策。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

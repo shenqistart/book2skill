@@ -1,0 +1,51 @@
+{
+  "skill": "lean-business-model-risk-map",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的产品有人用，但还不知道商业模式最大风险在哪，能帮我排一下吗？",
+      "expected_behavior": "应激活本 skill，画出客户、问题、渠道、收入、成本等模块并排序最大风险。",
+      "notes": "商业模式风险排序。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "融资前我应该补哪些证据，才能证明模式不是只靠故事？",
+      "expected_behavior": "应激活本 skill，标注证据等级并给出高风险验证清单。",
+      "notes": "融资前证据校验。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "获客成本越来越高，但收入模型还没跑通，这个模式危险在哪里？",
+      "expected_behavior": "应激活本 skill，检查渠道、收入、成本和关键指标的闭环风险。",
+      "notes": "单位经济与渠道风险。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把 BP 做得更漂亮，语言更打动投资人。",
+      "expected_behavior": "不应激活本 skill，这是融资文案美化，不是风险地图。",
+      "notes": "诱饵：BP 美化。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这轮融资估值应该怎么谈，条款怎么写？",
+      "expected_behavior": "不应激活本 skill，这是实时交易和法律问题。",
+      "notes": "诱饵：融资条款。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们现金只够两个月了，还要不要继续验证商业模式？",
+      "expected_behavior": "应提示先转 hard-things-wartime-leadership 处理现金危机，再回到本 skill 做风险地图。",
+      "notes": "边界：危机优先。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

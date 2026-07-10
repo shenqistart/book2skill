@@ -1,0 +1,51 @@
+{
+  "skill": "user-frontline-flywheel",
+  "version": "0.1.0",
+  "source_book": "02_创业思维 多书分类",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们客服每天收到很多反馈，但产品团队几乎不用，怎么建立闭环？",
+      "expected_behavior": "应激活本 skill，把前线信号接入产品、服务、口碑和复购飞轮。",
+      "notes": "前线反馈闭环。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "门店销售额还行，但复购差、差评多，应该先查什么？",
+      "expected_behavior": "应激活本 skill，回到真实现场，拆分用户行为、员工观察和经营指标。",
+      "notes": "门店现场场景。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "早期种子用户愿意反馈，我们怎么把它变成口碑和迭代节奏？",
+      "expected_behavior": "应激活本 skill，设计种子用户反馈、产品改进和口碑扩散机制。",
+      "notes": "种子用户飞轮。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我写一套品牌传播 slogan。",
+      "expected_behavior": "不应激活本 skill，这是品牌文案，不是前线经营飞轮。",
+      "notes": "诱饵：品牌文案。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我们的创业机会是否有垄断潜力？",
+      "expected_behavior": "不应激活本 skill，应优先使用 nonconsensus-monopoly-thesis。",
+      "notes": "诱饵：机会结构。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "用户反馈很多但互相矛盾，我们该全部听吗？",
+      "expected_behavior": "可激活本 skill，但必须区分真实行为、表达偏差和目标用户优先级，不能机械满足所有意见。",
+      "notes": "边界：反馈噪声。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

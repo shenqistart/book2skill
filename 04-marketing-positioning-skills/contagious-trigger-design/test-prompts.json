@@ -1,0 +1,51 @@
+{
+  "skill": "contagious-trigger-design",
+  "version": "0.1.0",
+  "source_book": "《疯传》 — 乔纳·伯杰",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "这篇品牌文章阅读还行，但没人转发，怎么诊断传播问题？",
+      "expected_behavior": "应激活本 skill，用 STEPPS 检查分享发动机。",
+      "notes": "内容传播诊断。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我们要做一个新品发布活动，希望用户愿意主动晒出来。",
+      "expected_behavior": "应激活本 skill，设计社交货币、公共性和故事嵌入。",
+      "notes": "活动分享设计。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这个产品功能能不能做成自带传播的分享点？",
+      "expected_behavior": "应激活本 skill，判断功能是否有触发、实用价值和可复述故事。",
+      "notes": "产品化传播点。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我买热搜，让它看起来像自然传播。",
+      "expected_behavior": "不应激活本 skill，应拒绝伪造传播。",
+      "notes": "诱饵：操纵榜单。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "这个品牌应该占据什么心智位置？",
+      "expected_behavior": "不应优先激活本 skill，应使用 mind-ladder-positioning。",
+      "notes": "诱饵：定位问题。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们想用强烈愤怒情绪做传播，会不会有风险？",
+      "expected_behavior": "可用本 skill 分析情绪传播力，但必须检查虚假、伤害和品牌反噬风险。",
+      "notes": "边界：情绪强但风险高。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

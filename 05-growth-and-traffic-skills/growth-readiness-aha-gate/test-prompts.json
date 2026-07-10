@@ -1,0 +1,51 @@
+{
+  "skill": "growth-readiness-aha-gate",
+  "version": "0.1.0",
+  "source_book": "《增长黑客》 — 肖恩·埃利斯、摩根·布朗",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们的产品刚上线，留存还不稳定，但老板想立刻买量，应该先检查什么？",
+      "expected_behavior": "应激活本 skill，先验证不可或缺性、啊哈时刻和热爱用户，再决定是否增长。",
+      "notes": "增长前门禁。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "用户注册很多，但第二天就不回来，啊哈时刻可能在哪里？",
+      "expected_behavior": "应激活本 skill，列候选啊哈时刻并用行为阈值和留存数据检验。",
+      "notes": "激活与留存。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "怎么判断我们有没有达到可以做增长黑客的产品状态？",
+      "expected_behavior": "应激活本 skill，用不可或缺性调查、行为阈值和细分热爱用户给出门禁结论。",
+      "notes": "PMF 与增长准备。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我们已经留存稳定，现在要从 19 个渠道里选一个核心渠道。",
+      "expected_behavior": "不应优先激活本 skill；应转 bullseye-channel-selection。",
+      "notes": "诱饵：渠道选择。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我写 5 条信息流广告标题，提高点击率。",
+      "expected_behavior": "不应激活本 skill；这是广告素材任务，不是增长门禁判断。",
+      "notes": "诱饵：素材优化。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "B2B SaaS 采购周期很长，不能看 7 日留存，怎么判断增长准备度？",
+      "expected_behavior": "应激活本 skill，但把留存窗口转换为试用完成、团队采用、续费意向等业务指标。",
+      "notes": "边界：低频或 B2B 产品。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}

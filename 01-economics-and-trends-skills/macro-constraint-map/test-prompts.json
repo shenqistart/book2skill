@@ -1,0 +1,52 @@
+{
+  "skill": "macro-constraint-map",
+  "version": "0.1.0",
+  "source_book": "《宏观经济学二十五讲：中国视角》 — 徐高；《分析与思考》 — 黄奇帆",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "中国为什么有时降息了，实体经济感受还是不明显？",
+      "expected_behavior": "应激活本 skill，分析货币传导、金融结构、债务和需求约束。",
+      "notes": "宏观传导堵点。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "房地产、地方债和居民资产负债表之间该怎么放在一张图里看？",
+      "expected_behavior": "应激活本 skill，输出宏观约束关系图。",
+      "notes": "中国宏观约束。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "这项政策更像短期需求刺激，还是供给侧结构性改革？",
+      "expected_behavior": "应激活本 skill，区分需求管理和制度性供给。",
+      "notes": "政策分类。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "出租车价格上限会带来什么短缺？",
+      "expected_behavior": "不应激活本 skill，应使用 market-policy-incidence。",
+      "notes": "诱饵：局部市场。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "今天人民币兑美元会涨还是跌？",
+      "expected_behavior": "不应激活本 skill，也不应给交易预测。",
+      "notes": "诱饵：实时交易预测。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "地方政府产业基金是不是能解决制造业升级问题？",
+      "expected_behavior": "可先用本 skill 看财政和金融约束，再转 industrial-policy-discipline 检查纪律。",
+      "notes": "边界：宏观约束与产业政策。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

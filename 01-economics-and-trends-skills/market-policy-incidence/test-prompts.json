@@ -1,0 +1,52 @@
+{
+  "skill": "market-policy-incidence",
+  "version": "0.1.0",
+  "source_book": "《经济学原理》 — N. 格里高利·曼昆",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "政府对房租设置上限，真的能让租客受益吗？",
+      "expected_behavior": "应激活本 skill，分析价格上限、短缺、质量、配给和长期供给变化。",
+      "notes": "价格管制。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "平台向商家加收 3% 服务费，最后会由商家还是消费者承担？",
+      "expected_behavior": "应激活本 skill，比较买卖双方弹性并判断归宿。",
+      "notes": "税负/费用归宿。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "博物馆想涨门票来增收，需要先看什么？",
+      "expected_behavior": "应激活本 skill，检查需求价格弹性和总收益关系。",
+      "notes": "弹性与收入。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我个人要不要离职读研？",
+      "expected_behavior": "不应激活本 skill，应使用 scarcity-incentive-lens。",
+      "notes": "诱饵：个人取舍，不是市场政策。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "美联储为什么做量化宽松？",
+      "expected_behavior": "不应激活本 skill，应使用 monetary-regime-map。",
+      "notes": "诱饵：货币政策。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "政府补贴新能源车会不会有效？",
+      "expected_behavior": "可用本 skill 分析补贴归宿和需求变化，但若讨论产业升级，应转 industrial-policy-discipline。",
+      "notes": "边界：市场补贴与产业政策。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+
